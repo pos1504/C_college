@@ -1,15 +1,14 @@
 #include<stdio.h>
 #include<stdlib.h>
 #define _CRT_SECURE_NO_WARNINGS
-#define MAX 10
+#define StatusSize 10
 
 void print_status()
 {
-
-	int i;
-	int buffer[MAX] = { 0 };
+	system("cls"); //화면 지우기
+	int buffer[StatusSize] = { 0 };
 	FILE* fp;
-	fopen_s(&fp, "hero_status.txt", "r");
+	fopen_s(&fp, "hero_status.txt", "r"); //용사 status 파일을 읽기
 
 	if (fp == NULL)
 	{
@@ -17,17 +16,20 @@ void print_status()
 		return 1;
 	}
 
-	for (int i = 0; i < MAX; i++)
+	for (int i = 0; i < StatusSize; i++)
 	{
-		fscanf(fp, "%d", &buffer[i]);
+		fscanf(fp, "%d", &buffer[i]); // 배열의 크기만큼 값을 입력 받음
 
 	}
-	printf("체력: %d\n", buffer[0]);
+
+	printf("--------------------------------------------\n");
+	printf("체력: %d  ", buffer[0]);
 	printf("공격력: %d\n", buffer[1]);
-	printf("마나: %d\n", buffer[2]);
+	printf("마나: %d  ", buffer[2]);
 	printf("골드: %d\n", buffer[3]);
 
 	fclose(fp);
-	printf("--------------------------------------------");
+	printf("--------------------------------------------\n");
+
 
 }

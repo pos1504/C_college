@@ -1,4 +1,5 @@
 ﻿  main.c
 C:\Users\pos15\source\repos\100_coin_hero\100_coin_hero\choose_status.h(4,1): warning C4005: '_CRT_SECURE_NO_WARNINGS': 매크로 재정의
 C:\Users\pos15\source\repos\100_coin_hero\100_coin_hero\main.c : message : '_CRT_SECURE_NO_WARNINGS'의 이전 정의를 참조하십시오.
+C:\Users\pos15\source\repos\100_coin_hero\100_coin_hero\print_status.h(16,11): warning C4098: 'print_status': 'void' 함수에서 값을 반환하고 있습니다.
   100_coin_hero.vcxproj -> C:\Users\pos15\source\repos\100_coin_hero\Debug\100_coin_hero.exe
