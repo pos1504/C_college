@@ -1,7 +1,10 @@
 ﻿#include<stdio.h>
 #include<stdlib.h>
+#include<time.h>
 #include"choose_status.h"
 #include"print_status.h"
+#include"monster_status.h"
+#include"RandomMonster.h"
 #define _CRT_SECURE_NO_WARNINGS
 #define StatusSize 10
 int Stage_num = 1; //몇 스테이지인지 전역 변수로 설정
@@ -14,6 +17,8 @@ int main()
 
 	choose_status();
 	print_status();
+	monster_status();
+	RandomMonster();
 	monster_stage();
 	return 0;
 
