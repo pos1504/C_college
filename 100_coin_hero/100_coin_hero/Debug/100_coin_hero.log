@@ -1,11 +1,14 @@
 ﻿  main.c
 C:\Users\pos15\source\repos\100_coin_hero\100_coin_hero\choose_status.h(4,1): warning C4005: '_CRT_SECURE_NO_WARNINGS': 매크로 재정의
 C:\Users\pos15\source\repos\100_coin_hero\100_coin_hero\main.c : message : '_CRT_SECURE_NO_WARNINGS'의 이전 정의를 참조하십시오.
-C:\Users\pos15\source\repos\100_coin_hero\100_coin_hero\print_status.h(16,11): warning C4098: 'print_status': 'void' 함수에서 값을 반환하고 있습니다.
+C:\Users\pos15\source\repos\100_coin_hero\100_coin_hero\print_status.h(19,11): warning C4098: 'print_status': 'void' 함수에서 값을 반환하고 있습니다.
+C:\Users\pos15\source\repos\100_coin_hero\100_coin_hero\print_status.h(29,8): warning C4013: 'gotoxy'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
 C:\Users\pos15\source\repos\100_coin_hero\100_coin_hero\monster_status.h(17,17): warning C4098: 'monster_status': 'void' 함수에서 값을 반환하고 있습니다.
 C:\Users\pos15\source\repos\100_coin_hero\100_coin_hero\monster_status.h(34,17): warning C4098: 'monster_status': 'void' 함수에서 값을 반환하고 있습니다.
 C:\Users\pos15\source\repos\100_coin_hero\100_coin_hero\monster_status.h(51,17): warning C4098: 'monster_status': 'void' 함수에서 값을 반환하고 있습니다.
 C:\Users\pos15\source\repos\100_coin_hero\100_coin_hero\monster_status.h(7,9): warning C4101: 'num' :참조되지 않은 지역 변수입니다.
 C:\Users\pos15\source\repos\100_coin_hero\100_coin_hero\RandomMonster.h(9,21): warning C4244: '함수': 'time_t'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\pos15\source\repos\100_coin_hero\100_coin_hero\RandomMonster.h(27): warning C4716: 'RandomMonster': 값을 반환해야 합니다.
-  100_coin_hero.vcxproj -> C:\Users\pos15\source\repos\100_coin_hero\Debug\100_coin_hero.exe
+C:\Users\pos15\source\repos\100_coin_hero\100_coin_hero\RandomMonster.h(10,15): warning C4101: 'i' :참조되지 않은 지역 변수입니다.
+C:\Users\pos15\source\repos\100_coin_hero\100_coin_hero\RandomMonster.h(10,9): warning C4101: 'x' :참조되지 않은 지역 변수입니다.
+C:\Users\pos15\source\repos\100_coin_hero\100_coin_hero\main.c(39,1): error C2449: 파일 범위에 '{'가 있습니다. 함수 헤더가 없는 것 같습니다.
+C:\Users\pos15\source\repos\100_coin_hero\100_coin_hero\main.c(56,1): error C2059: 구문 오류: '}'

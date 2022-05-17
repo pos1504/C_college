@@ -143,6 +143,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="choose_status.h" />
+    <ClInclude Include="gotoxy.h" />
     <ClInclude Include="monster_status.h" />
     <ClInclude Include="print_status.h" />
     <ClInclude Include="RandomMonster.h" />
