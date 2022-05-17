@@ -143,7 +143,9 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="choose_status.h" />
+    <ClInclude Include="monster_status.h" />
     <ClInclude Include="print_status.h" />
+    <ClInclude Include="RandomMonster.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

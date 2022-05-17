@@ -17,9 +17,9 @@ int main()
 
 	choose_status();
 	print_status();
-	monster_status();
+	//monster_status();
 	RandomMonster();
-	monster_stage();
+	//monster_stage();
 	return 0;
 
 
