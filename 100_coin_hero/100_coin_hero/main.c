@@ -1,10 +1,12 @@
 ﻿#include<stdio.h>
 #include<stdlib.h>
 #include<time.h>
+#include<Windows.h>
 #include"choose_status.h"
 #include"print_status.h"
 #include"monster_status.h"
 #include"RandomMonster.h"
+#include"gotoxy.h"
 #define _CRT_SECURE_NO_WARNINGS
 #define StatusSize 10
 int Stage_num = 1; //몇 스테이지인지 전역 변수로 설정
@@ -15,11 +17,17 @@ int main()
 {
 	system("mode con cols=56 lines=20 | title 100-Coin-Hero");// 화면크기 설정
 
-	choose_status();
-	print_status();
-	//monster_status();
+	//choose_status();
+	
 	RandomMonster();
+	//print_status();
+	//monster_status();
+	
 	//monster_stage();
+
+
+	
+	
 	return 0;
 
 
@@ -27,7 +35,7 @@ int main()
 
 
 
-void monster_stage()// 몬스터 스테이지 추후에 랜덤확률로 호출
+//void monster_stage()// 몬스터 스테이지 추후에 랜덤확률로 호출
 {
 
 	int monster[3] = { 0,1,1 };//1이면 몬스터 존재 0이면 몬스터 사망 추후에 랜덤으로 몬스터 수 조정 test는 일단 3마리로
@@ -46,3 +54,12 @@ void monster_stage()// 몬스터 스테이지 추후에 랜덤확률로 호출
 	
 
 }
+
+void fight(int enemy, int me){
+
+
+	
+
+
+}
+
