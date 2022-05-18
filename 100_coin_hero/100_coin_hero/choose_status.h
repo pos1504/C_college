@@ -49,7 +49,7 @@ void choose_status()
 
 		fclose(fp);
 	}
-
+	system("cls");//화면지우기
 
 	/*FILE* fp = fopen("hero_status.txt", "r");  //용사 status 파일을 읽기
 

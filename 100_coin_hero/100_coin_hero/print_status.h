@@ -25,18 +25,12 @@ void print_status()
 
 	}
 	
-	//printf("--------------------------------------------\n");
-	gotoxy(2,16); 
-	printf("체력: %d  ", buffer[0]);
-	gotoxy(30, 16); 
-	printf("공격력: %d\n", buffer[1]);
-	gotoxy(2, 18); 
-	printf("마나: %d  ", buffer[2]);
-	gotoxy(30, 18); 
+	printf("-------------------player-------------------\n");
+	printf("체력: %d  ", buffer[0]); 
+	printf("공격력: %d\n", buffer[1]);	
+	printf("마나: %d  ", buffer[2]); 
 	printf("골드: %d\n", buffer[3]);
+	printf("--------------------------------------------\n");
 
 	fclose(fp);
-	//printf("--------------------------------------------\n");
-
-
 }

@@ -148,6 +148,11 @@
     <ClInclude Include="print_status.h" />
     <ClInclude Include="RandomMonster.h" />
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="monster1_status.txt" />
+    <Text Include="monster2_status.txt" />
+    <Text Include="monster3_status.txt" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

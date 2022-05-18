@@ -36,4 +36,15 @@
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="monster1_status.txt">
+      <Filter>소스 파일</Filter>
+    </Text>
+    <Text Include="monster2_status.txt">
+      <Filter>소스 파일</Filter>
+    </Text>
+    <Text Include="monster3_status.txt">
+      <Filter>소스 파일</Filter>
+    </Text>
+  </ItemGroup>
 </Project>
