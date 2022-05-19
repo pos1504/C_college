@@ -35,6 +35,9 @@
     <ClInclude Include="gotoxy.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
+    <ClInclude Include="fight.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Text Include="monster1_status.txt">

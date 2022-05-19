@@ -7,6 +7,7 @@
 #include"monster_status.h"
 #include"RandomMonster.h"
 #include"gotoxy.h"
+#include"fight.h"
 #define _CRT_SECURE_NO_WARNINGS
 #define StatusSize 10
 int Stage_num = 1; //몇 스테이지인지 전역 변수로 설정
