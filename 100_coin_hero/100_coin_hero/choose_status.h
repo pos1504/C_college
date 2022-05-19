@@ -51,36 +51,7 @@ void choose_status()
 	}
 	system("cls");//화면지우기
 
-	/*FILE* fp = fopen("hero_status.txt", "r");  //용사 status 파일을 읽기
 
-	int buffer[StatusSize] = { 0, };
-
-	int i;
-
-
-	for (i = 0; i < StatusSize ; i++) // 배열의 크기만큼 값을 입력 받음
-
-	{
-
-		fscanf(fp, "%d", &buffer[i]);
-
-	}
-
-
-	fclose(fp); // 입력을 받은뒤에 파일닫기
-
-
-
-	for (i = 0; i < 10; i++) // 입력받은 배열을 출력
-
-	{
-
-		printf("data[%d] : %d \n", i, buffer[i]);
-
-	}
-
-
-     */
 
 
 }

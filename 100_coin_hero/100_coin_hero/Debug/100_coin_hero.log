@@ -8,7 +8,7 @@ C:\Users\pos15\source\repos\100_coin_hero\100_coin_hero\monster_status.h(51,17):
 C:\Users\pos15\source\repos\100_coin_hero\100_coin_hero\monster_status.h(7,9): warning C4101: 'num' :참조되지 않은 지역 변수입니다.
 C:\Users\pos15\source\repos\100_coin_hero\100_coin_hero\RandomMonster.h(9,21): warning C4244: '함수': 'time_t'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
 C:\Users\pos15\source\repos\100_coin_hero\100_coin_hero\RandomMonster.h(10,10): warning C4101: 'i' :참조되지 않은 지역 변수입니다.
-C:\Users\pos15\source\repos\100_coin_hero\100_coin_hero\fight.h(76,21): warning C4098: 'fight': 'void' 함수에서 값을 반환하고 있습니다.
-C:\Users\pos15\source\repos\100_coin_hero\100_coin_hero\fight.h(81,21): warning C4098: 'fight': 'void' 함수에서 값을 반환하고 있습니다.
+C:\Users\pos15\source\repos\100_coin_hero\100_coin_hero\fight.h(77,21): warning C4098: 'fight': 'void' 함수에서 값을 반환하고 있습니다.
+C:\Users\pos15\source\repos\100_coin_hero\100_coin_hero\fight.h(82,21): warning C4098: 'fight': 'void' 함수에서 값을 반환하고 있습니다.
 C:\Users\pos15\source\repos\100_coin_hero\100_coin_hero\gotoxy.h(18): warning C4716: 'gotoxy': 값을 반환해야 합니다.
   100_coin_hero.vcxproj -> C:\Users\pos15\source\repos\100_coin_hero\Debug\100_coin_hero.exe

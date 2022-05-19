@@ -22,7 +22,7 @@ void RandomMonster()
 
         if (monster[i] == 1) {
             mon1++;
-            fopen_s(&fp, "monster1_status.txt", "r");
+            fopen_s(&fp, "monster1_status.txt", "r"); //monster1 status txt 불러오기
             for (int i = 0; i < 3; i++)
             {
                 fscanf(fp, "%d", &buffer[i]);
@@ -36,7 +36,7 @@ void RandomMonster()
         }
         else if (monster[i] == 2){
             mon2++;
-            fopen_s(&fp, "monster2_status.txt", "r");
+            fopen_s(&fp, "monster2_status.txt", "r"); //monster2 status txt 불러오기
             for (int i = 0; i < 3; i++)
             {
                 fscanf(fp, "%d", &buffer[i]);
@@ -50,7 +50,7 @@ void RandomMonster()
         }
         else if (monster[i] == 3) {
             mon3++;
-            fopen_s(&fp, "monster3_status.txt", "r");
+            fopen_s(&fp, "monster3_status.txt", "r"); //monster3 status txt 불러오기
             for (int i = 0; i < 3; i++)
             {
                 fscanf(fp, "%d", &buffer[i]);
