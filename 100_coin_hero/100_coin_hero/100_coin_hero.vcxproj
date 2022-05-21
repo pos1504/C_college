@@ -150,6 +150,7 @@
     <ClInclude Include="RandomMonster.h" />
   </ItemGroup>
   <ItemGroup>
+    <Text Include="hero_status.txt" />
     <Text Include="monster1_status.txt" />
     <Text Include="monster2_status.txt" />
     <Text Include="monster3_status.txt" />

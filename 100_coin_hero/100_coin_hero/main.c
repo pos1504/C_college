@@ -12,17 +12,21 @@
 #define StatusSize 10
 
 int main() 
-{
+{	
+	int monster_number=0   , mon1=0 , mon2=0 , mon3=0 ;
+
 	
 
-	choose_status();
+	//choose_status();
 	
 	
 	print_status();
 
-	RandomMonster();
+	RandomMonster(&monster_number, &mon1, &mon2, &mon3);
 	//monster_status();
-	fight(1);
+	printf("monster_number : %d mon1 : %d mon2 : %d mon3 :  %d\n",monster_number,mon1,mon2,mon3);
+	fight(&monster_number,&mon1,&mon2,&mon3);
+	
 
 
 

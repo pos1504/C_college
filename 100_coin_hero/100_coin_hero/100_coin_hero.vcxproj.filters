@@ -49,5 +49,8 @@
     <Text Include="monster3_status.txt">
       <Filter>소스 파일</Filter>
     </Text>
+    <Text Include="hero_status.txt">
+      <Filter>소스 파일</Filter>
+    </Text>
   </ItemGroup>
 </Project>
