@@ -50,7 +50,7 @@ void fight(int *monster_number, int* mon1, int* mon2, int* mon3)  // fight함수를
 
             
             (*mon1)--;
-            i++;
+            i++; //몬스터 수 증가
             fclose(fp);
         }
 
@@ -69,7 +69,7 @@ void fight(int *monster_number, int* mon1, int* mon2, int* mon3)  // fight함수를
                     fscanf(fp, "%d", &buffer_m[i][j]); //체력 공격력 골드량 불러오기
                 }
 
-             i++;
+             i++; //몬스터 수 증가
             (*mon2)--;
             fclose(fp);
         }
@@ -90,8 +90,8 @@ void fight(int *monster_number, int* mon1, int* mon2, int* mon3)  // fight함수를
                     fscanf(fp, "%d", &buffer_m[i][j]); //체력 공격력 골드량 불러오기
                 }
 
-            i++;
-            (*mon3)--;
+            i++; //몬스터 수 증가
+            (*mon3)--; 
             fclose(fp);
         }
     };
@@ -118,12 +118,12 @@ void fight(int *monster_number, int* mon1, int* mon2, int* mon3)  // fight함수를
     }
     몬스터 배열 확인
     */
-    int count = *monster_number;
+    int count = *monster_number; //종료하기 위한 count 선언
 
      while (1)
      {
          
-         int ch = 0,mch =0; 
+         int ch = 0,mch =0; //ch 공격 선택  mch몬스터 선택
     
 
 
@@ -131,18 +131,11 @@ void fight(int *monster_number, int* mon1, int* mon2, int* mon3)  // fight함수를
 
          printf("몬스터 선택 : " );
 
-
-        
-
-
-         
-
-
              
          back:
          for (int i = 0; i < *monster_number; i++) 
          {
-             if (buffer_m[i][0] <= 0)
+             if (buffer_m[i][0] <= 0)//몬스터가 죽으면..
              {
                  continue;
              }
@@ -158,7 +151,7 @@ void fight(int *monster_number, int* mon1, int* mon2, int* mon3)  // fight함수를
          {
              
              printf("사망한 몬스터는 선택할수없습니다!\n");
-             goto back;
+             goto back; //다른숫자를 선택하면... 돌아가기
 
          }
              
@@ -181,9 +174,9 @@ void fight(int *monster_number, int* mon1, int* mon2, int* mon3)  // fight함수를
              if (buffer_m[mch - 1][0] <= 0)
              {
 
-                 buffer_h[3] += buffer_m[mch - 1][2];//골드 획득.
+                 buffer_h[3] += buffer_m[mch - 1][2];//몬스터 골드 획득 골드 획득.
 
-                 count--;
+                 count--; 
 
 
              }
@@ -215,7 +208,7 @@ void fight(int *monster_number, int* mon1, int* mon2, int* mon3)  // fight함수를
             
              if (count <= 0)
              {
-                 printf("------------------stage종료------------------\n");
+                 printf("------------------stage종료------------------\n"); //종료 구문
                  break;
              }
          
@@ -236,7 +229,7 @@ void fight(int *monster_number, int* mon1, int* mon2, int* mon3)  // fight함수를
     fopen_s(&fp, "hero_status.txt", "w");
 
     for (int i = 0; i < StatusSize; i++)
-        fprintf(fp, "%d\n", buffer_h[i]);
+        fprintf(fp, "%d\n", buffer_h[i]); 
 
 
     fclose(fp);
