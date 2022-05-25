@@ -8,6 +8,7 @@
 #include"RandomMonster.h"
 #include"gotoxy.h"
 #include"fight.h"
+#include"store.h"
 #define _CRT_SECURE_NO_WARNINGS
 #define StatusSize 10
 
@@ -26,7 +27,7 @@ int main()
 	//monster_status();
 	printf("monster_number : %d mon1 : %d mon2 : %d mon3 :  %d\n",monster_number,mon1,mon2,mon3);
 	fight(&monster_number,&mon1,&mon2,&mon3);
-	
+	store();
 
 
 
