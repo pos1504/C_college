@@ -119,7 +119,7 @@ void fight(int *monster_number, int* mon1, int* mon2, int* mon3)  // fight함수를
     몬스터 배열 확인
     */
     int count = *monster_number; //종료하기 위한 count 선언
-
+    
      while (1)
      {
          
@@ -192,6 +192,7 @@ void fight(int *monster_number, int* mon1, int* mon2, int* mon3)  // fight함수를
              fclose(fp);
              system("cls");
              print_status();
+             printf("-------------------stage%d-------------------\n", buffer_h[9] + 1);//buffer[9]에 stage 단계저장
              for (int i = 0; i < *monster_number; i++)
              {
                  printf("-------------------monster------------------\n");
@@ -223,7 +224,7 @@ void fight(int *monster_number, int* mon1, int* mon2, int* mon3)  // fight함수를
      }
 
 
-    
+     buffer_h[9] += 1; //stage num 증가.
      
 
     fopen_s(&fp, "hero_status.txt", "w");

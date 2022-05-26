@@ -148,6 +148,7 @@
     <ClInclude Include="monster_status.h" />
     <ClInclude Include="print_status.h" />
     <ClInclude Include="RandomMonster.h" />
+    <ClInclude Include="store.h" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="hero_status.txt" />

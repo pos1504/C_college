@@ -10,6 +10,9 @@ C:\Users\pos15\source\repos\100_coin_hero\100_coin_hero\RandomMonster.h(9,21): w
 C:\Users\pos15\source\repos\100_coin_hero\100_coin_hero\fight.h(43,25): warning C4098: 'fight': 'void' 함수에서 값을 반환하고 있습니다.
 C:\Users\pos15\source\repos\100_coin_hero\100_coin_hero\fight.h(63,25): warning C4098: 'fight': 'void' 함수에서 값을 반환하고 있습니다.
 C:\Users\pos15\source\repos\100_coin_hero\100_coin_hero\fight.h(84,25): warning C4098: 'fight': 'void' 함수에서 값을 반환하고 있습니다.
-C:\Users\pos15\source\repos\100_coin_hero\100_coin_hero\fight.h(227,22): warning C4098: 'fight': 'void' 함수에서 값을 반환하고 있습니다.
+C:\Users\pos15\source\repos\100_coin_hero\100_coin_hero\fight.h(221,22): warning C4098: 'fight': 'void' 함수에서 값을 반환하고 있습니다.
+C:\Users\pos15\source\repos\100_coin_hero\100_coin_hero\store.h(19,11): warning C4098: 'store': 'void' 함수에서 값을 반환하고 있습니다.
+C:\Users\pos15\source\repos\100_coin_hero\100_coin_hero\main.c(27,11): warning C4098: 'startscreen': 'void' 함수에서 값을 반환하고 있습니다.
+C:\Users\pos15\source\repos\100_coin_hero\100_coin_hero\main.c(37,18): warning C4244: '함수': 'time_t'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
 C:\Users\pos15\source\repos\100_coin_hero\100_coin_hero\gotoxy.h(18): warning C4716: 'gotoxy': 값을 반환해야 합니다.
   100_coin_hero.vcxproj -> C:\Users\pos15\source\repos\100_coin_hero\Debug\100_coin_hero.exe

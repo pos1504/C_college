@@ -31,7 +31,7 @@ void RandomMonster(int *monster_number,int *mon1,int *mon2,int *mon3)
             {
                 fscanf(fp, "%d", &buffer[i]);
             }
-            printf("-------------------monster-------------------\n");
+            printf("-------------------monster------------------\n");
             printf("체력: %d  ", buffer[0]);
             printf("공격력: %d\n", buffer[1]);
             printf("골드: %d  \n", buffer[2]);

@@ -23,6 +23,7 @@ void store()
 		fscanf(fp, "%d", &buffer[i]);
 
 	}
+	fclose(fp);
 	printf("-------------------player-------------------\n");
 	printf("체력: %d  ", buffer[0]);
 	printf("공격력: %d\n", buffer[1]);
@@ -32,7 +33,7 @@ void store()
 	printf("공격력 강화 포션: %d\n", buffer[5]);
 	printf("--------------------------------------------\n");
 
-
+	printf("-------------------stage%d-------------------\n", buffer[9] + 1);//buffer[9]에 stage 단계저장
 	printf("===============상점===============\n"); // 상점
 	printf("(1) 체력 회복 포션 - 2골드\n");
 	printf("(2) 공격력 강화 포션 - 4골드\n");
@@ -51,7 +52,7 @@ void store()
 		else {
 			printf("골드가 부족합니다.\n");
 			count1 = 0; // 골드 부족-> 입력받은 count값 0으로 출력
-			Sleep(2000);
+			
 		}
 	
 	printf("공격력 강화 포션을 몇 개 구매하시겠습니까?\n");
@@ -64,13 +65,15 @@ void store()
 		else {
 			printf("골드가 부족합니다.\n"); // 골드 부족-> 입력받은 count값 0으로 출력
 			count2 = 0;
-			Sleep(2000);
+			
 		}
 		
 
 	buffer[3] = gold;
-	buffer[4] = count1;
-	buffer[5] = count2;
+	buffer[4] += count1;
+	buffer[5] += count2;
+	buffer[9] += 1; //stage num 증가.
+	
 	printf("-------------------player-------------------\n");
 	printf("체력: %d  ", buffer[0]);
 	printf("공격력: %d\n", buffer[1]);
@@ -79,5 +82,13 @@ void store()
 	printf("체력 회복 포션: %d\n", buffer[4]);
 	printf("공격력 강화 포션: %d\n", buffer[5]);
 	printf("--------------------------------------------\n");
+	
 
+	fopen_s(&fp, "hero_status.txt", "w");
+
+	for (int i = 0; i < StatusSize; i++)
+		fprintf(fp, "%d\n", buffer[i]);
+
+
+	fclose(fp);
 }
