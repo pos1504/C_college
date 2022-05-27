@@ -7,12 +7,23 @@ int main()
 
 	int*ptr1 = &num1, *ptr2 = &num2;
 
-	int* ptr3 = 0;
+	printf("*ptr1 : %4d  *ptr2 : %4d\n", *ptr1, *ptr2);
+	printf("ptr1  : %4p  ptr2  : %4p\n", ptr1, ptr2);
 
-	ptr1 = &num2;
-	ptr2 = &num1;
 
-	printf("ptr1 ê°€ë¦¬í‚¤ëŠ” ê°’ : %4d  ptr2 ê°€ë¦¬í‚¤ëŠ” ê°’ : %4d\n", *ptr1, *ptr2);
-	printf("ptr1 ì£¼ì†Œ ê°’ : %4d  ptr2 ì£¼ì†Œ ê°’ : %4d\n", ptr1, ptr2);
+	*ptr1 += 10; //num1ÀÇ°ª 10 Áõ°¡
+	*ptr2  -= 10;//num2ÀÇ°ª 10 °¨¼Ò
+
+
+
+	int *temp;
+	temp = ptr1;
+	ptr1 = ptr2; //Æ÷ÀÎÅÍº¯¼öptr1ÀÌnum2¸¦°¡¸®Å´
+	ptr2 = temp; //Æ÷ÀÎÅÍº¯¼öptr2°¡num1°¡¸£Å´
+
+
+
+	printf("*ptr1 : %4d  *ptr2 : %4d\n", *ptr1, *ptr2);
+	printf("ptr1  : %4p  ptr2  : %4p\n", ptr1, ptr2);
 
 }

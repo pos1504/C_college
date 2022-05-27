@@ -1,0 +1,4 @@
+﻿  12week-1.c
+C:\Users\pos15\source\repos\12week\12week\12week-1.c(53,10): warning C4098: 'test1': 'void' 함수에서 값을 반환하고 있습니다.
+C:\Users\pos15\source\repos\12week\12week\12week-1.c(71,10): warning C4098: 'test2': 'void' 함수에서 값을 반환하고 있습니다.
+  12week.vcxproj -> C:\Users\pos15\source\repos\12week\Debug\12week.exe

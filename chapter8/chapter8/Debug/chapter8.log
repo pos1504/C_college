@@ -1,0 +1,17 @@
+﻿  8-1.c
+C:\Users\pos15\source\repos\chapter8\chapter8\8-1.c(7,7): warning C4013: 'test1'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
+C:\Users\pos15\source\repos\chapter8\chapter8\8-1.c(8,7): warning C4013: 'test2'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
+C:\Users\pos15\source\repos\chapter8\chapter8\8-1.c(9,7): warning C4013: 'test3'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
+C:\Users\pos15\source\repos\chapter8\chapter8\8-1.c(10,7): warning C4013: 'test4'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
+C:\Users\pos15\source\repos\chapter8\chapter8\8-1.c(11,7): warning C4013: 'test5'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
+C:\Users\pos15\source\repos\chapter8\chapter8\8-1.c(12,7): warning C4013: 'test6'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
+C:\Users\pos15\source\repos\chapter8\chapter8\8-1.c(13,7): warning C4013: 'test7'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
+C:\Users\pos15\source\repos\chapter8\chapter8\8-1.c(14,7): warning C4013: 'test8'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
+C:\Users\pos15\source\repos\chapter8\chapter8\8-1.c(29): warning C4716: 'test1': 값을 반환해야 합니다.
+C:\Users\pos15\source\repos\chapter8\chapter8\8-1.c(40): warning C4716: 'test2': 값을 반환해야 합니다.
+C:\Users\pos15\source\repos\chapter8\chapter8\8-1.c(75): warning C4716: 'test4': 값을 반환해야 합니다.
+C:\Users\pos15\source\repos\chapter8\chapter8\8-1.c(67): warning C4716: 'test3': 값을 반환해야 합니다.
+C:\Users\pos15\source\repos\chapter8\chapter8\8-1.c(89): warning C4716: 'test5': 값을 반환해야 합니다.
+C:\Users\pos15\source\repos\chapter8\chapter8\8-1.c(129): warning C4716: 'test7': 값을 반환해야 합니다.
+C:\Users\pos15\source\repos\chapter8\chapter8\8-1.c(101): warning C4716: 'test6': 값을 반환해야 합니다.
+  chapter8.vcxproj -> C:\Users\pos15\source\repos\chapter8\Debug\chapter8.exe

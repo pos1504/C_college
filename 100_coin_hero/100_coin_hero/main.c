@@ -62,22 +62,14 @@ void roop() {
 
 		else 
 		{
-			 
-
 			if(no_twice == random_stage)//첫번째 스테이지 그리고  상점 연속으로 두번이상 못들어가게 지정
 			{
 				continue;
 			}
-
 			store();
-
-			
-
-			
 		}
 
 		no_twice = random_stage;
-
 
 		fopen_s(&fp, "hero_status.txt", "r");  //player status 불러오기
 		for (int i = 0; i < StatusSize; i++)
@@ -87,8 +79,6 @@ void roop() {
 		fclose(fp);
 
 
-
-		
 			
 		
 	}
