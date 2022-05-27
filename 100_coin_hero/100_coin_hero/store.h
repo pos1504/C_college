@@ -11,11 +11,11 @@ void store()
 
 	int buffer[StatusSize] = { 0 };
 	FILE* fp;
-	fopen_s(&fp, "hero_status.txt", "r"); //¿ë»ç status ÆÄÀÏ ÀĞ±â
+	fopen_s(&fp, "hero_status.txt", "r"); //ìš©ì‚¬ status íŒŒì¼ ì½ê¸°
 
 	if (fp == NULL)
 	{
-		printf("°ÔÀÓ ·Îµù ½ÇÆĞ\n");
+		printf("ê²Œì„ ë¡œë”© ì‹¤íŒ¨\n");
 		return 1;
 	}
 	for (int i = 0; i < StatusSize; i++)
@@ -25,62 +25,94 @@ void store()
 	}
 	fclose(fp);
 	printf("-------------------player-------------------\n");
-	printf("Ã¼·Â: %d  ", buffer[0]);
-	printf("°ø°İ·Â: %d\n", buffer[1]);
-	printf("¸¶³ª: %d  ", buffer[2]);
-	printf("°ñµå: %d\n", buffer[3]);
-	printf("Ã¼·Â È¸º¹ Æ÷¼Ç: %d\n", buffer[4]);
-	printf("°ø°İ·Â °­È­ Æ÷¼Ç: %d\n", buffer[5]);
+	printf("ì²´ë ¥: %d  ", buffer[0]);
+	printf("ê³µê²©ë ¥: %d\n", buffer[1]);
+	printf("ë§ˆë‚˜: %d  ", buffer[2]);
+	printf("ê³¨ë“œ: %d\n", buffer[3]);
+	printf("ì²´ë ¥ íšŒë³µ í¬ì…˜: %d\n", buffer[4]);
+	printf("ê³µê²©ë ¥ ê°•í™” í¬ì…˜: %d\n", buffer[5]);
 	printf("--------------------------------------------\n");
 
-	printf("-------------------stage%d-------------------\n", buffer[9] + 1);//buffer[9]¿¡ stage ´Ü°èÀúÀå
-	printf("===============»óÁ¡===============\n"); // »óÁ¡
-	printf("(1) Ã¼·Â È¸º¹ Æ÷¼Ç - 2°ñµå\n");
-	printf("(2) °ø°İ·Â °­È­ Æ÷¼Ç - 4°ñµå\n");
+	printf("-------------------stage%d-------------------\n", buffer[9] + 1);//buffer[9]ì— stage ë‹¨ê³„ì €ì¥
+	printf("===============ìƒì ===============\n"); // ìƒì 
+	printf("(1) ì²´ë ¥ íšŒë³µ í¬ì…˜ - 2ê³¨ë“œ\n");
+	printf("(2) ê³µê²©ë ¥ ê°•í™” í¬ì…˜ - 4ê³¨ë“œ\n");
 	printf("==================================\n");
+	printf("(3) ìƒì  ë‚˜ê°€ê¸°\n");
 
-	int count1 = 0; int count2 = 0; // count1: Ã¼·Â È¸º¹ Æ÷¼Ç ¼ö, count2: °ø°İ·Â °­È­ Æ÷¼Ç ¼ö
-	int gold = buffer[3]; // buffer[3]¿¡ ÀÖ´Â °ñµå°ª ¹Ş¾Æ¿È
+	int num; // ë²ˆí˜¸ ì…ë ¥
+	printf("ë²ˆí˜¸ë¥¼ ì…ë ¥í•˜ì„¸ìš”. \n");
+	scanf("%d", &num);
 
-	printf("Ã¼·Â È¸º¹ Æ÷¼ÇÀ» ¸î °³ ±¸¸ÅÇÏ½Ã°Ú½À´Ï±î?\n");
-	scanf("%d", &count1);
-		if (gold-2*count1 >= 0) {
-			printf("Ã¼·Â È¸º¹ Æ÷¼Ç: %d°³\n", count1);
-			gold -= 2 * count1;
-			printf("³²Àº °ñµå: %d \n", gold);
-		}
-		else {
-			printf("°ñµå°¡ ºÎÁ·ÇÕ´Ï´Ù.\n");
-			count1 = 0; // °ñµå ºÎÁ·-> ÀÔ·Â¹ŞÀº count°ª 0À¸·Î Ãâ·Â
+	int count1 = 0; int count2 = 0; // count1: ì²´ë ¥ íšŒë³µ í¬ì…˜ ìˆ˜, count2: ê³µê²©ë ¥ ê°•í™” í¬ì…˜ ìˆ˜
+	int gold = buffer[3]; // buffer[3]ì— ìˆëŠ” ê³¨ë“œê°’ ë°›ì•„ì˜´
+
+	while (1)
+	{
+		if (num == 0) {
+			Sleep(2000);
+			system("cls");
+			printf("===============ìƒì ===============\n"); // ìƒì 
+			printf("(1) ì²´ë ¥ íšŒë³µ í¬ì…˜ - 2ê³¨ë“œ\n");
+			printf("(2) ê³µê²©ë ¥ ê°•í™” í¬ì…˜ - 4ê³¨ë“œ\n");
+			printf("==================================\n");
+			printf("(3) ìƒì  ë‚˜ê°€ê¸°\n");
+
 			
+			printf("ë²ˆí˜¸ë¥¼ ì…ë ¥í•˜ì„¸ìš”. \n");
+			scanf("%d", &num);
 		}
-	
-	printf("°ø°İ·Â °­È­ Æ÷¼ÇÀ» ¸î °³ ±¸¸ÅÇÏ½Ã°Ú½À´Ï±î?\n");
-	scanf("%d", &count2);
-		if (gold-4*count2 >= 0) {
-			printf("°ø°İ·Â È¸º¹ Æ÷¼Ç: %d°³ \n", count2);
-			gold -= 4 * count2;
-			printf("³²Àº °ñµå: %d\n", gold);
-		}
-		else {
-			printf("°ñµå°¡ ºÎÁ·ÇÕ´Ï´Ù.\n"); // °ñµå ºÎÁ·-> ÀÔ·Â¹ŞÀº count°ª 0À¸·Î Ãâ·Â
-			count2 = 0;
+		if (num == 1) {
 			
+			printf("ì²´ë ¥ íšŒë³µ í¬ì…˜ì„ ëª‡ ê°œ êµ¬ë§¤í•˜ì‹œê² ìŠµë‹ˆê¹Œ?\n");
+			scanf("%d", &count1);
+			if (gold - 2 * count1 >= 0) {
+				printf("ì²´ë ¥ íšŒë³µ í¬ì…˜: %dê°œ\n", count1);
+				gold -= 2 * count1;
+				printf("ë‚¨ì€ ê³¨ë“œ: %d \n", gold);
+				num = 0;
+			}
+			else {
+				printf("ê³¨ë“œê°€ ë¶€ì¡±í•©ë‹ˆë‹¤.\n");
+				count1 = 0; // ê³¨ë“œ ë¶€ì¡±-> ì…ë ¥ë°›ì€ countê°’ 0ìœ¼ë¡œ ì¶œë ¥
+				num = 0;
+			}
 		}
+		if (num == 2) {
+		
+			printf("ê³µê²©ë ¥ ê°•í™” í¬ì…˜ì„ ëª‡ ê°œ êµ¬ë§¤í•˜ì‹œê² ìŠµë‹ˆê¹Œ?\n");
+			scanf("%d", &count2);
+			if (gold - 4 * count2 >= 0) {
+				printf("ê³µê²©ë ¥ íšŒë³µ í¬ì…˜: %dê°œ \n", count2);
+				gold -= 4 * count2;
+				printf("ë‚¨ì€ ê³¨ë“œ: %d\n", gold);
+				num = 0;
+			}
+			else {
+				printf("ê³¨ë“œê°€ ë¶€ì¡±í•©ë‹ˆë‹¤.\n"); // ê³¨ë“œ ë¶€ì¡±-> ì…ë ¥ë°›ì€ countê°’ 0ìœ¼ë¡œ ì¶œë ¥
+				count2 = 0;
+				num = 0;
+			}
+		}
+		if (num == 3) {
+			printf("ìƒì ì„ ë‚˜ê°‘ë‹ˆë‹¤.\n");
+			break;
+		}
+	}
 		
 
 	buffer[3] = gold;
 	buffer[4] += count1;
 	buffer[5] += count2;
-	buffer[9] += 1; //stage num Áõ°¡.
+	buffer[9] += 1; //stage num ì¦ê°€.
 	
 	printf("-------------------player-------------------\n");
-	printf("Ã¼·Â: %d  ", buffer[0]);
-	printf("°ø°İ·Â: %d\n", buffer[1]);
-	printf("¸¶³ª: %d  ", buffer[2]);
-	printf("°ñµå: %d\n", buffer[3]);
-	printf("Ã¼·Â È¸º¹ Æ÷¼Ç: %d\n", buffer[4]);
-	printf("°ø°İ·Â °­È­ Æ÷¼Ç: %d\n", buffer[5]);
+	printf("ì²´ë ¥: %d  ", buffer[0]);
+	printf("ê³µê²©ë ¥: %d\n", buffer[1]);
+	printf("ë§ˆë‚˜: %d  ", buffer[2]);
+	printf("ê³¨ë“œ: %d\n", buffer[3]);
+	printf("ì²´ë ¥ íšŒë³µ í¬ì…˜: %d\n", buffer[4]);
+	printf("ê³µê²©ë ¥ ê°•í™” í¬ì…˜: %d\n", buffer[5]);
 	printf("--------------------------------------------\n");
 	
 
