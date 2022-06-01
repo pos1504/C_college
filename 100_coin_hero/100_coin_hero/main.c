@@ -9,21 +9,30 @@
 #include"gotoxy.h"
 #include"fight.h"
 #include"store.h"
+#include"ranking.h"
 #define _CRT_SECURE_NO_WARNINGS
 #define StatusSize 10
 
 void startscreen() {
 
 	int n;
-	printf("1.처음 시작 \n2. 이어 하기\n ");
+	printf("1. 처음 시작 \n2. 이어 하기\n3. 플레이어 순위\n"); 
 	scanf("%d",&n );
 
 	if (n == 1) {
 		choose_status();
 		
 	}
+	/*if (n == 2)
+	{
 
-	else {
+	}*/
+	if (n == 3)
+	{
+		ranking();
+	}
+	else 
+	{
 		return 0;
 	}
 }
@@ -109,6 +118,7 @@ int main()
 	fight(&monster_number,&mon1,&mon2,&mon3);
 	store();
 	*/
+	ranking();
 
 
 	
