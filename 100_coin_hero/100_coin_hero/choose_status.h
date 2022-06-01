@@ -6,6 +6,11 @@
 void choose_status()
 {
 	system("cls");//화면지우기
+	
+	char name[10]; //이름 입력
+	printf("이름 입력: ");
+	scanf("%s", &name);
+	printf("player 이름: %s\n", name);
 
 	int num;
 	printf("캐릭터를 선택하세요.\n");
