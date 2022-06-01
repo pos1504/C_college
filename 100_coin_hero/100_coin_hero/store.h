@@ -127,7 +127,9 @@ void store()
 		buffer[4] += count1;
 		buffer[5] += count2;
 		buffer[6] += count3;
-
+		count1 = 0;
+		count2 = 0;
+		count3 = 0;
 
 		fopen_s(&fp, "hero_status.txt", "w");
 		for (int i = 0; i < StatusSize; i++)
@@ -158,4 +160,6 @@ void store()
 
 
 	fclose(fp);
+
+
 }

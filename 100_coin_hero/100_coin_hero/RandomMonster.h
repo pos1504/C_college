@@ -3,8 +3,12 @@
 #include <time.h>
 #define _CRT_SECURE_NO_WARNINGS
 #define StatusSize 10
+
+void print_status();
 void RandomMonster(int *monster_number,int *mon1,int *mon2,int *mon3)
 {
+    print_status();
+    
     printf("<몬스터 등장> \n");
     srand(time(NULL));
     int  i =0;
