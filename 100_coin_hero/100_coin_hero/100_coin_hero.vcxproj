@@ -146,6 +146,7 @@
     <ClInclude Include="fight.h" />
     <ClInclude Include="gotoxy.h" />
     <ClInclude Include="monster_status.h" />
+    <ClInclude Include="printmap.h" />
     <ClInclude Include="print_status.h" />
     <ClInclude Include="RandomMonster.h" />
     <ClInclude Include="store.h" />

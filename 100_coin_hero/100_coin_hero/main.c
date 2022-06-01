@@ -9,6 +9,7 @@
 #include"gotoxy.h"
 #include"fight.h"
 #include"store.h"
+#include"printmap.h"
 #define _CRT_SECURE_NO_WARNINGS
 #define StatusSize 10
 
@@ -90,17 +91,25 @@ void roop() {
 
 
 
+
+
+
+
+
 int main() 
 {	
 	int monster_number=0   , mon1=0 , mon2=0 , mon3=0 ;
 
-	startscreen();
+
+	printmap();
+
+	//startscreen();
 
 	//choose_status();
 	
 	
 	
-	roop();
+	//roop();
 	/*print_status();
 
 	RandomMonster(&monster_number, &mon1, &mon2, &mon3);
