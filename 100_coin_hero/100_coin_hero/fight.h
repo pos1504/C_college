@@ -161,7 +161,7 @@ void fight(int *monster_number, int* mon1, int* mon2, int* mon3)  // fight함수
 
          
 
-         if (ch == 1)
+         if (ch == 1) //공격
          {
              printf("palyer-> monster 공격\n");
              buffer_m[mch - 1][0] -= buffer_h[1];//몬스터 체력에서 플레이어 공격력 빼기
