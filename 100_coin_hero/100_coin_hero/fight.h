@@ -10,87 +10,87 @@ void print_status();
 
 
 
-void fight(int *monster_number, int* mon1, int* mon2, int* mon3)  // fightí•¨ìˆ˜ë¥¼ êµ¬í˜„ì„ ìœ„í•´ RandomMonsterì—ì„œ ê°’ì„ ë°›ì•„ì™€ì•¼ ë˜ëŠ”ë° ì¶”í›„ ì¶”ê°€ì˜ˆì •
+void fight(int *monster_number, int* mon1, int* mon2, int* mon3)  // fightÇÔ¼ö¸¦ ±¸ÇöÀ» À§ÇØ RandomMonster¿¡¼­ °ªÀ» ¹Ş¾Æ¿Í¾ß µÇ´Âµ¥ ÃßÈÄ Ãß°¡¿¹Á¤
 {
 
 
 
 
-    int** buffer_m = (int**)malloc(sizeof(int*) * (*monster_number)); //ëª¬ìŠ¤í„°ë“¤ statusë¥¼ ë°›ê¸° ìœ„í•œ ì´ì¤‘ë°°ì—´
+    int** buffer_m = (int**)malloc(sizeof(int*) * (*monster_number)); //¸ó½ºÅÍµé status¸¦ ¹Ş±â À§ÇÑ ÀÌÁß¹è¿­
     for (int i = 0; i < *monster_number; i++) {
         buffer_m[i] = (int*)malloc(sizeof(int) * monsterSize); 
     }
 
 
 
-    int buffer_h[StatusSize] = { 0, }; //player ì²´ë ¥ ê³µê²©ë ¥ ë§ˆë‚˜ ê³¨ë“œëŸ‰ ë°›ê¸°ìœ„í•œ buffer
+    int buffer_h[StatusSize] = { 0, }; //player Ã¼·Â °ø°İ·Â ¸¶³ª °ñµå·® ¹Ş±âÀ§ÇÑ buffer
 
 
     FILE* fp;
     int i = 0;
-    while (i < *monster_number)   //ëª¬ìŠ¤í„° ìˆ˜ë§Œí¼ ë°˜ë³µ 
+    while (i < *monster_number)   //¸ó½ºÅÍ ¼ö¸¸Å­ ¹İº¹ 
     {
         
         
-        if (*mon1 > 0) //ëª¬ìŠ¤í„° ì¢…ë¥˜1 ì¼ë•Œ
+        if (*mon1 > 0) //¸ó½ºÅÍ Á¾·ù1 ÀÏ¶§
         {
 
-            fopen_s(&fp, "monster1_status.txt", "r"); //monster 1 txt ì—´ê¸° 
+            fopen_s(&fp, "monster1_status.txt", "r"); //monster 1 txt ¿­±â 
 
             if (fp == NULL)
             {
-                printf("ê²Œì„ ë¡œë”© ì‹¤íŒ¨\n");
+                printf("°ÔÀÓ ·Îµù ½ÇÆĞ\n");
                 return 1;
             }
             
                 for (int j = 0; j < 3; j++)
                 {
-                    fscanf(fp, "%d", &buffer_m[i][j]); //ì²´ë ¥ ê³µê²©ë ¥ ê³¨ë“œëŸ‰ ë¶ˆëŸ¬ì˜¤ê¸°
+                    fscanf(fp, "%d", &buffer_m[i][j]); //Ã¼·Â °ø°İ·Â °ñµå·® ºÒ·¯¿À±â
                 }
 
             
             (*mon1)--;
-            i++; //ëª¬ìŠ¤í„° ìˆ˜ ì¦ê°€
+            i++; //¸ó½ºÅÍ ¼ö Áõ°¡
             fclose(fp);
         }
 
-        else if (*mon2 > 0) //ëª¬ìŠ¤í„° ì¢…ë¥˜ 1ì¼ë•Œ
+        else if (*mon2 > 0) //¸ó½ºÅÍ Á¾·ù 1ÀÏ¶§
         {
-            fopen_s(&fp, "monster2_status.txt", "r"); //monster 1 txt ì—´ê¸° 
+            fopen_s(&fp, "monster2_status.txt", "r"); //monster 1 txt ¿­±â 
             if (fp == NULL)
             {
-                printf("ê²Œì„ ë¡œë”© ì‹¤íŒ¨\n");
+                printf("°ÔÀÓ ·Îµù ½ÇÆĞ\n");
                 return 1;
             }
 
 
                 for (int j = 0; j < 3; j++)
                 {
-                    fscanf(fp, "%d", &buffer_m[i][j]); //ì²´ë ¥ ê³µê²©ë ¥ ê³¨ë“œëŸ‰ ë¶ˆëŸ¬ì˜¤ê¸°
+                    fscanf(fp, "%d", &buffer_m[i][j]); //Ã¼·Â °ø°İ·Â °ñµå·® ºÒ·¯¿À±â
                 }
 
-             i++; //ëª¬ìŠ¤í„° ìˆ˜ ì¦ê°€
+             i++; //¸ó½ºÅÍ ¼ö Áõ°¡
             (*mon2)--;
             fclose(fp);
         }
 
         else
         {
-            fopen_s(&fp, "monster3_status.txt", "r"); //monster 2 txt ì—´ê¸° 
+            fopen_s(&fp, "monster3_status.txt", "r"); //monster 2 txt ¿­±â 
 
             if (fp == NULL)
             {
-                printf("ê²Œì„ ë¡œë”© ì‹¤íŒ¨\n");
+                printf("°ÔÀÓ ·Îµù ½ÇÆĞ\n");
                 return 1;
             }
 
             
                 for (int j = 0; j < 3; j++)
                 {
-                    fscanf(fp, "%d", &buffer_m[i][j]); //ì²´ë ¥ ê³µê²©ë ¥ ê³¨ë“œëŸ‰ ë¶ˆëŸ¬ì˜¤ê¸°
+                    fscanf(fp, "%d", &buffer_m[i][j]); //Ã¼·Â °ø°İ·Â °ñµå·® ºÒ·¯¿À±â
                 }
 
-            i++; //ëª¬ìŠ¤í„° ìˆ˜ ì¦ê°€
+            i++; //¸ó½ºÅÍ ¼ö Áõ°¡
             (*mon3)--; 
             fclose(fp);
         }
@@ -99,7 +99,7 @@ void fight(int *monster_number, int* mon1, int* mon2, int* mon3)  // fightí•¨ìˆ˜
 
 
 
-    fopen_s(&fp, "hero_status.txt", "r");  //player status ë¶ˆëŸ¬ì˜¤ê¸°
+    fopen_s(&fp, "hero_status.txt", "r");  //player status ºÒ·¯¿À±â
     for (int i = 0; i < StatusSize; i++)
     {
         fscanf(fp, "%d", &buffer_h[i]);
@@ -116,30 +116,31 @@ void fight(int *monster_number, int* mon1, int* mon2, int* mon3)  // fightí•¨ìˆ˜
         }
         printf("\n"); 
     }
-    ëª¬ìŠ¤í„° ë°°ì—´ í™•ì¸
+    ¸ó½ºÅÍ ¹è¿­ È®ÀÎ
     */
-    int count = *monster_number; //ì¢…ë£Œí•˜ê¸° ìœ„í•œ count ì„ ì–¸
-    
+    int count = *monster_number; //Á¾·áÇÏ±â À§ÇÑ count ¼±¾ğ
+    int ch = 0; //ch °ø°İ ¼±ÅÃ 
      while (1)
      {
          
-         int ch = 0,mch =0; //ch ê³µê²© ì„ íƒ  mchëª¬ìŠ¤í„° ì„ íƒ
+         int mch = 0;// mch¸ó½ºÅÍ ¼±ÅÃ
+          
     
 
 
         
 
-         printf("ëª¬ìŠ¤í„° ì„ íƒ : " );
+         printf("¸ó½ºÅÍ ¼±ÅÃ : " );
 
              
          back:
          for (int i = 0; i < *monster_number; i++) 
          {
-             if (buffer_m[i][0] <= 0)//ëª¬ìŠ¤í„°ê°€ ì£½ìœ¼ë©´..
+             if (buffer_m[i][0] <= 0)//¸ó½ºÅÍ°¡ Á×À¸¸é..
              {
                  continue;
              }
-             printf("%d.ëª¬ìŠ¤í„° ", i + 1);
+             printf("%d.¸ó½ºÅÍ ", i + 1);
          }
             
           
@@ -150,31 +151,40 @@ void fight(int *monster_number, int* mon1, int* mon2, int* mon3)  // fightí•¨ìˆ˜
          if (buffer_m[mch - 1][0] <= 0)
          {
              
-             printf("ì‚¬ë§í•œ ëª¬ìŠ¤í„°ëŠ” ì„ íƒí• ìˆ˜ì—†ìŠµë‹ˆë‹¤!\n");
-             goto back; //ë‹¤ë¥¸ìˆ«ìë¥¼ ì„ íƒí•˜ë©´... ëŒì•„ê°€ê¸°
+             printf("»ç¸ÁÇÑ ¸ó½ºÅÍ´Â ¼±ÅÃÇÒ¼ö¾ø½À´Ï´Ù!\n");
+             goto back; //´Ù¸¥¼ıÀÚ¸¦ ¼±ÅÃÇÏ¸é... µ¹¾Æ°¡±â
 
          }
              
-         printf("1.ê³µê²©\n2.ìŠ¤í‚¬\n3.ì•„ì´í…œ ì‚¬ìš©\n"); //1. ê³µê²© 2.ìŠ¤í‚¬ 3.ì•„ì´í…œ ì‚¬ìš© ë“±ë“± ì¶”ê°€
-         scanf("%d", &ch); // ìˆ«ìì…ë ¥
+         printf("1.°ø°İ\n2.½ºÅ³(¸¶³ª4¼Ò¸ğ)\n3.¾ÆÀÌÅÛ »ç¿ë\n"); //1. °ø°İ 2.½ºÅ³ 3.¾ÆÀÌÅÛ »ç¿ë µîµî Ãß°¡
+         scanf("%d", &ch); // ¼ıÀÚÀÔ·Â
 
 
          
 
          if (ch == 1)
          {
-             printf("palyer-> monster ê³µê²©\n");
-             buffer_m[mch - 1][0] -= buffer_h[1];//ëª¬ìŠ¤í„° ì²´ë ¥ì—ì„œ í”Œë ˆì´ì–´ ê³µê²©ë ¥ ë¹¼ê¸°
-             printf("monster ì²´ë ¥ : % d\n ", buffer_m[mch - 1][0]);
-             printf("monster-> player ê³µê²©\n");
-             buffer_h[0] -= buffer_m[mch - 1][1]; //í”Œë ˆì´ì–´ ì²´ë ¥ì—ì„œ ëª¬ìŠ¤í„° ê³µê²©ë ¥ ë¹¼ê¸°
-             printf("player ì²´ë ¥ : %d\n ", buffer_h[0]);
-             ch = 0; //ìˆ«ì ì´ˆê¸°í™”
+             
+             printf("palyer-> monster °ø°İ\n");
+             buffer_m[mch - 1][0] -= buffer_h[1];//¸ó½ºÅÍ Ã¼·Â¿¡¼­ ÇÃ·¹ÀÌ¾î °ø°İ·Â »©±â
+             printf("monster Ã¼·Â : % d\n ", buffer_m[mch - 1][0]);
+             Sleep(1000);
+             printf("monster-> player °ø°İ\n");
+             buffer_h[0] -= buffer_m[mch - 1][1]; //ÇÃ·¹ÀÌ¾î Ã¼·Â¿¡¼­ ¸ó½ºÅÍ °ø°İ·Â »©±â
+             printf("player Ã¼·Â : %d\n ", buffer_h[0]);
+             Sleep(1000);
+             ch = 0; //¼ıÀÚ ÃÊ±âÈ­
+
+             if (buffer_h[1] > buffer_h[7]) 
+             {
+                 buffer_h[1] = buffer_h[7]; //¶§¸®°í ¹°¾àÈ¿°ú ¾ø¾Ö±â
+             }
+
 
              if (buffer_m[mch - 1][0] <= 0)
              {
 
-                 buffer_h[3] += buffer_m[mch - 1][2];//ëª¬ìŠ¤í„° ê³¨ë“œ íšë“ ê³¨ë“œ íšë“.
+                 buffer_h[3] += buffer_m[mch - 1][2];//¸ó½ºÅÍ °ñµå È¹µæ °ñµå È¹µæ.
 
                  count--; 
 
@@ -190,84 +200,169 @@ void fight(int *monster_number, int* mon1, int* mon2, int* mon3)  // fightí•¨ìˆ˜
 
 
              fclose(fp);
-             system("cls");
-             print_status();
-             printf("-------------------stage%d-------------------\n", buffer_h[9] + 1);//buffer[9]ì— stage ë‹¨ê³„ì €ì¥
-             for (int i = 0; i < *monster_number; i++)
-             {
-                 printf("-------------------monster------------------\n");
-                 printf("ì²´ë ¥: %d  ", buffer_m[i][0]);
-                 printf("ê³µê²©ë ¥: %d\n", buffer_m[i][1]);
-                 printf("ê³¨ë“œ: %d  \n", buffer_m[i][2]);
-                 printf("--------------------------------------------\n");
-             }
+
+
+             
             
          }
          
-          if (ch == 2) //ìŠ¤í‚¬ ì‚¬ìš©
+          if (ch == 2) //½ºÅ³ »ç¿ë
         {
-            printf("ëª¬ìŠ¤í„°ë¥¼ ì •ì§€ì‹œì¼œ ë‘ ë²ˆ ì—°ì† ê³µê²©\n");
-            printf("palyer-> monster ê³µê²©\n");
-            buffer_m[mch - 1][0] -= buffer_h[1];//ëª¬ìŠ¤í„° ì²´ë ¥ì—ì„œ í”Œë ˆì´ì–´ ê³µê²©ë ¥ ë¹¼ê¸°
-            printf("monster ì²´ë ¥ : % d\n ", buffer_m[mch - 1][0]);
+              buffer_h[2] -= 4;
 
-            if (buffer_m[mch - 1][0] <= 0)
+            if(buffer_h[2] < 0 )
             {
-                buffer_h[3] += buffer_m[mch - 1][2];//ëª¬ìŠ¤í„° ê³¨ë“œ íšë“ ê³¨ë“œ íšë“.
-                count--;
+                buffer_h[2] += 4;
+                ch = 0;
             }
-            fopen_s(&fp, "hero_status.txt", "w");
-
-            for (int i = 0; i < StatusSize; i++)
-                fprintf(fp, "%d\n", buffer_h[i]);
-
-            fclose(fp);
-            system("cls");
-            print_status();
-            printf("-------------------stage%d-------------------\n", buffer_h[9] + 1);//buffer[9]ì— stage ë‹¨ê³„ì €ì¥
-            for (int i = 0; i < *monster_number; i++)
+            else 
             {
-                printf("-------------------monster------------------\n");
-                printf("ì²´ë ¥: %d  ", buffer_m[i][0]);
-                printf("ê³µê²©ë ¥: %d\n", buffer_m[i][1]);
-                printf("ê³¨ë“œ: %d  \n", buffer_m[i][2]);
-                printf("--------------------------------------------\n");
-            }
+                printf("palyer-> monster ÀüºÎ°ø°İ\n");
+                for (int i = 0; i < *monster_number; i++)
+                {
+                    buffer_m[i][0] -= buffer_h[1];
+                    printf("monster%d Ã¼·Â : %d\n ", i, buffer_m[i][0]);
+                }
+                buffer_h[0] -= buffer_m[mch - 1][1]; //ÇÃ·¹ÀÌ¾î Ã¼·Â¿¡¼­ ¸ó½ºÅÍ °ø°İ·Â »©±â
+                printf("player Ã¼·Â : %d\n ", buffer_h[0]);
+                Sleep(1000);
 
-            ch = 1;
+                if (buffer_h[1] > buffer_h[7])
+                {
+                    buffer_h[1] = buffer_h[7]; //¶§¸®°í ¹°¾àÈ¿°ú ¾ø¾Ö±â
+                }
+
+
+                for (int i = 0; i < *monster_number; i++)
+                {
+                    if (buffer_m[i][0] <= 0)
+                    {
+                        buffer_h[3] += buffer_m[i][2];//¸ó½ºÅÍ °ñµå È¹µæ °ñµå È¹µæ.
+                        count--;
+                    }
+                }
+
+
+                fopen_s(&fp, "hero_status.txt", "w");
+
+                for (int i = 0; i < StatusSize; i++)
+                    fprintf(fp, "%d\n", buffer_h[i]);
+
+                fclose(fp);
+
+
+                ch = 0;
+            }
+            
         }
-         
-        if (ch == 3) //ì•„ì´í…œ ì‚¬ìš©
+        
+        if (ch == 3) //¾ÆÀÌÅÛ »ç¿ë
         {
-            int pot;
-            printf("1. ì²´ë ¥ íšŒë³µ í¬ì…˜ ì‚¬ìš©\n2. ê³µê²©ë ¥ ê°•í™” í¬ì…˜ ì‚¬ìš©\n");
-            printf("ë²ˆí˜¸ ì„ íƒ: \n");
+   
+            int pot= 0;
+
+             printf("1. Ã¼·Â È¸º¹ Æ÷¼Ç »ç¿ë\n2. °ø°İ·Â °­È­ Æ÷¼Ç »ç¿ë\n3.¸¶³ª È¸º¹ Æ÷¼Ç »ç¿ë\n4.³ª°¡±â");
             scanf("%d", &pot);           
             if (pot == 1) 
             {
-                buffer_h[4]-=1;      
-                buffer_h[0] += 10; //ì²´ë ¥ 10 ì¦ê°€
-                break;
+                if(buffer_h[4] > 0)
+                {
+                    buffer_h[4] -= 1;
+                    buffer_h[0] += 10; //Ã¼·Â 10 Áõ°¡
+                    printf("monster-> player °ø°İ\n");
+                    buffer_h[0] -= buffer_m[mch - 1][1]; //ÇÃ·¹ÀÌ¾î Ã¼·Â¿¡¼­ ¸ó½ºÅÍ °ø°İ·Â »©±â
+                    printf("player Ã¼·Â : %d\n ", buffer_h[0]);
+                    Sleep(1000);
+                }
+                else {
+                    
+                    printf("¾ÆÀÌÅÛÀÌ ¾ø½À´Ï´Ù ´Ù½Ã ¼±ÅÃÇØÁÖ¼¼¿ä. \n");
+                    Sleep(1000);
+                    pot = 0;
+                    ch = 3;
+                 
+                }
+                
             }
             if (pot == 2)
             {
-                buffer_h[5]-=1;
-                buffer_h[1] += 5; //ê³µê²©ë ¥ 5 ì¦ê°€             
-                break;
+                if (buffer_h[5] > 0) 
+                {
+                    buffer_h[5] -= 1;
+                    buffer_h[1] += 5; //°ø°İ·Â 5 Áõ°¡
+                    printf("monster-> player °ø°İ\n");
+                    buffer_h[0] -= buffer_m[mch - 1][1]; //ÇÃ·¹ÀÌ¾î Ã¼·Â¿¡¼­ ¸ó½ºÅÍ °ø°İ·Â »©±â
+                    printf("player Ã¼·Â : %d\n ", buffer_h[0]);
+                    Sleep(1000);
+                }
+                else {
+                    printf("¾ÆÀÌÅÛÀÌ ¾ø½À´Ï´Ù ´Ù½Ã ¼±ÅÃÇØÁÖ¼¼¿ä. \n");
+                    Sleep(1000);
+                    pot = 0;
+                    ch = 3;
+                    
+                }
+
+                
             }
-            ch = 1;
-        }  
+
+            if (pot == 3)
+            {
+                if (buffer_h[6] > 0)
+                {
+                    buffer_h[6] -= 1;
+                    buffer_h[2] += 8; //¸¶³ª 8 Áõ°¡
+                    printf("monster-> player °ø°İ\n");
+                    buffer_h[0] -= buffer_m[mch - 1][1]; //ÇÃ·¹ÀÌ¾î Ã¼·Â¿¡¼­ ¸ó½ºÅÍ °ø°İ·Â »©±â
+                    printf("player Ã¼·Â : %d\n ", buffer_h[0]);
+                    Sleep(1000);
+                }
+                else {
+                    printf("¾ÆÀÌÅÛÀÌ ¾ø½À´Ï´Ù ´Ù½Ã ¼±ÅÃÇØÁÖ¼¼¿ä. \n");
+                    Sleep(1000);
+                    pot = 0;
+                    ch = 3;
+                }
+            }
+
+            if (pot == 4)
+            {
+               pot = 0;
+              
+            }
+
+            fopen_s(&fp, "hero_status.txt", "w");
+            for (int i = 0; i < StatusSize; i++)
+                fprintf(fp, "%d\n", buffer_h[i]);
+            fclose(fp);
+
+       
+            ch = 0;
+
+
            
+        }  
+        system("cls");
+        print_status();
+        printf("-------------------stage%d-------------------\n", buffer_h[9] + 1);//buffer[9]¿¡ stage ´Ü°èÀúÀå
+        for (int i = 0; i < *monster_number; i++)
+        {
+            printf("-------------------monster------------------\n");
+            printf("Ã¼·Â: %d  ", buffer_m[i][0]);
+            printf("°ø°İ·Â: %d\n", buffer_m[i][1]);
+            printf("°ñµå: %d  \n", buffer_m[i][2]);
+            printf("--------------------------------------------\n");
+        }
             
              if (count <= 0)
              {
-                 printf("------------------stageì¢…ë£Œ------------------\n"); //ì¢…ë£Œ êµ¬ë¬¸
+                 printf("------------------stageÁ¾·á------------------\n"); //Á¾·á ±¸¹®
                  break;
              }
          
 
          
-         if (buffer_h[0] <= 0) //í”Œë ˆì´ì–´ ì²´ë ¥ì´ 0ì´í•˜ ì´ë©´ ì¢…ë£Œ
+         if (buffer_h[0] <= 0) //ÇÃ·¹ÀÌ¾î Ã¼·ÂÀÌ 0ÀÌÇÏ ÀÌ¸é Á¾·á
          {
              printf("GAME OVER\n");
              return 0;
@@ -276,7 +371,7 @@ void fight(int *monster_number, int* mon1, int* mon2, int* mon3)  // fightí•¨ìˆ˜
      }
 
 
-     buffer_h[9] += 1; //stage num ì¦ê°€.
+     buffer_h[9] += 1; //stage num Áõ°¡.
      
 
     fopen_s(&fp, "hero_status.txt", "w");
@@ -292,7 +387,7 @@ void fight(int *monster_number, int* mon1, int* mon2, int* mon3)  // fightí•¨ìˆ˜
 
 
 
-    for (int i = 0; i < *monster_number; i++)  //ë™ì ë©”ëª¨ë¦¬ í•´ì œ
+    for (int i = 0; i < *monster_number; i++)  //µ¿Àû¸Ş¸ğ¸® ÇØÁ¦
     {
         free(buffer_m[i]);
     }

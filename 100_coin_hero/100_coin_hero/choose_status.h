@@ -20,9 +20,9 @@ void choose_status()
 	{
 		FILE* fp = fopen("hero_status.txt", "w"); //용사 status 파일을 쓰기
 
-		int hero_status[StatusSize] = { 30,4,10,5 }; //검사 status 
+		int hero_status[StatusSize] = { 30,4,10,5,0,0,0,4 }; //검사 status 
 		for (int i = 0; i < StatusSize; i++)
-			fprintf(fp, "%d\n", hero_status[i]); //0.체력 1.공격력 2.마나 3.골드량 4.... 9.stage number
+			fprintf(fp, "%d\n", hero_status[i]); //0.체력 1.공격력 2.마나 3.골드량 4.아이템 5.아이템 6.아이템 7. 기본장착 아이템  9.stage number
 
 
 
@@ -33,7 +33,7 @@ void choose_status()
 	{
 		FILE* fp = fopen("hero_status.txt", "w"); 
 
-		int hero_status[StatusSize] = { 100,20,20,10 };  
+		int hero_status[StatusSize] = { 100,20,20,10,0,0,0,20 };  
 		for (int i = 0; i < StatusSize; i++)
 			fprintf(fp, "%d\n", hero_status[i]); 
 
@@ -46,7 +46,7 @@ void choose_status()
 	{
 		FILE* fp = fopen("hero_status.txt", "w"); 
 
-		int hero_status[StatusSize] = { 18,3,12,5 }; //도적 status 
+		int hero_status[StatusSize] = { 18,3,12,5,0,0,0,3 }; //도적 status 
 		for (int i = 0; i < StatusSize; i++)
 			fprintf(fp, "%d\n", hero_status[i]); 
 

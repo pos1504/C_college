@@ -50,7 +50,6 @@ int ranking(void)
 	printf("%4s| %4s| %8s| \n","순위" "player 이름", "stage 수");
 	for (i = 0; i < MAX; i++)
 	{
-		printf("%4d| %4d| %8s|\n",
-			player_list[i].rank, player_list[i].name, player_list[i].stagenum);
+		printf("%4d| %4s| %8d|\n",player_list[i].rank, player_list[i].name, player_list[i].stagenum);
 	}
 }

@@ -32,6 +32,7 @@ void print_status()
 	printf("골드: %d\n", buffer[3]);
 	printf("체력 회복 포션: %d\n", buffer[4]);
 	printf("공격력 강화 포션: %d\n", buffer[5]);
+	printf("마나 회복 포션: %d\n", buffer[6]);
 	printf("--------------------------------------------\n");
 
 	fclose(fp);

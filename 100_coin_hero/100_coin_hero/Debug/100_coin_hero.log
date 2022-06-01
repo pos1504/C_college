@@ -10,10 +10,14 @@ C:\Users\pos15\source\repos\100_coin_hero\100_coin_hero\RandomMonster.h(9,21): w
 C:\Users\pos15\source\repos\100_coin_hero\100_coin_hero\fight.h(43,25): warning C4098: 'fight': 'void' 함수에서 값을 반환하고 있습니다.
 C:\Users\pos15\source\repos\100_coin_hero\100_coin_hero\fight.h(63,25): warning C4098: 'fight': 'void' 함수에서 값을 반환하고 있습니다.
 C:\Users\pos15\source\repos\100_coin_hero\100_coin_hero\fight.h(84,25): warning C4098: 'fight': 'void' 함수에서 값을 반환하고 있습니다.
-C:\Users\pos15\source\repos\100_coin_hero\100_coin_hero\fight.h(221,22): warning C4098: 'fight': 'void' 함수에서 값을 반환하고 있습니다.
+C:\Users\pos15\source\repos\100_coin_hero\100_coin_hero\fight.h(366,22): warning C4098: 'fight': 'void' 함수에서 값을 반환하고 있습니다.
 C:\Users\pos15\source\repos\100_coin_hero\100_coin_hero\store.h(19,11): warning C4098: 'store': 'void' 함수에서 값을 반환하고 있습니다.
+C:\Users\pos15\source\repos\100_coin_hero\100_coin_hero\ranking.h(50,9): warning C4473: 'printf': 서식 문자열에 대한 인수가 충분하게 전달되지 않았습니다.
+C:\Users\pos15\source\repos\100_coin_hero\100_coin_hero\ranking.h(50,9): message : 자리 표시자 및 해당 매개 변수에는 variadic 인수가 3개 필요하지만 2개가 제공되었습니다.
+C:\Users\pos15\source\repos\100_coin_hero\100_coin_hero\ranking.h(50,9): message : 누락된 variadic 인수 3이(가) 서식 문자열 '%8s'에 필요합니다.
 C:\Users\pos15\source\repos\100_coin_hero\100_coin_hero\printmap.h(24,18): warning C4244: '함수': 'time_t'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\pos15\source\repos\100_coin_hero\100_coin_hero\main.c(28,11): warning C4098: 'startscreen': 'void' 함수에서 값을 반환하고 있습니다.
-C:\Users\pos15\source\repos\100_coin_hero\100_coin_hero\main.c(38,18): warning C4244: '함수': 'time_t'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\pos15\source\repos\100_coin_hero\100_coin_hero\main.c(37,11): warning C4098: 'startscreen': 'void' 함수에서 값을 반환하고 있습니다.
+C:\Users\pos15\source\repos\100_coin_hero\100_coin_hero\main.c(47,18): warning C4244: '함수': 'time_t'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
 C:\Users\pos15\source\repos\100_coin_hero\100_coin_hero\gotoxy.h(18): warning C4716: 'gotoxy': 값을 반환해야 합니다.
+C:\Users\pos15\source\repos\100_coin_hero\100_coin_hero\ranking.h(55): warning C4716: 'ranking': 값을 반환해야 합니다.
   100_coin_hero.vcxproj -> C:\Users\pos15\source\repos\100_coin_hero\Debug\100_coin_hero.exe

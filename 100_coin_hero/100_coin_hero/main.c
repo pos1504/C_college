@@ -110,15 +110,15 @@ int main()
 	int monster_number=0   , mon1=0 , mon2=0 , mon3=0 ;
 
 
-	printmap();
+	//printmap();
 
-	//startscreen();
+	startscreen();
 
 	//choose_status();
+	//store();
 	
 	
-	
-	//roop();
+	roop();
 	/*print_status();
 
 	RandomMonster(&monster_number, &mon1, &mon2, &mon3);
@@ -127,7 +127,7 @@ int main()
 	fight(&monster_number,&mon1,&mon2,&mon3);
 	store();
 	*/
-	ranking();
+	//ranking();
 
 
 	

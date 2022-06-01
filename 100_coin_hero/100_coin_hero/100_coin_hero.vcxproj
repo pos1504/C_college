@@ -149,6 +149,7 @@
     <ClInclude Include="printmap.h" />
     <ClInclude Include="print_status.h" />
     <ClInclude Include="RandomMonster.h" />
+    <ClInclude Include="ranking.h" />
     <ClInclude Include="store.h" />
   </ItemGroup>
   <ItemGroup>
