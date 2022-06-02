@@ -2,6 +2,7 @@
 #include<stdlib.h>
 #include<time.h>
 #include<Windows.h>
+#include"name.h"
 #include"choose_status.h"
 #include"print_status.h"
 #include"monster_status.h"
@@ -9,7 +10,7 @@
 #include"gotoxy.h"
 #include"fight.h"
 #include"store.h"
-
+#include"monster_list.h"
 #include"ranking.h"
 
 #define _CRT_SECURE_NO_WARNINGS
@@ -242,10 +243,11 @@ void printmap() {
 void startscreen() {
 
 	int n;
-	printf("1. 처음 시작 \n2. 이어 하기\n3. 플레이어 순위\n"); 
+	printf("1. 처음 시작 \n2. 이어 하기\n3. 플레이어 순위\n4. 몬스터 도감\n"); 
 	scanf("%d",&n );
 
 	if (n == 1) {
+		name();
 		choose_status();
 		
 	}
@@ -256,6 +258,10 @@ void startscreen() {
 	if (n == 3)
 	{
 		ranking();
+	}
+	if(n==4)
+	{
+		monster_list();
 	}
 	else 
 	{
