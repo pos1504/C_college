@@ -25,5 +25,5 @@ C:\Users\pos15\source\repos\100_coin_hero\100_coin_hero\main.c(437,10): warning 
 C:\Users\pos15\source\repos\100_coin_hero\100_coin_hero\monster_list.h(88): warning C4716: 'monster_list': 값을 반환해야 합니다.
 C:\Users\pos15\source\repos\100_coin_hero\100_coin_hero\gotoxy.h(18): warning C4716: 'gotoxy': 값을 반환해야 합니다.
 C:\Users\pos15\source\repos\100_coin_hero\100_coin_hero\ranking.h(61): warning C4716: 'ranking': 값을 반환해야 합니다.
-C:\Users\pos15\source\repos\100_coin_hero\100_coin_hero\fight2.h(394): warning C4715: 'fight2': 모든 제어 경로에서 값을 반환하지는 않습니다.
+C:\Users\pos15\source\repos\100_coin_hero\100_coin_hero\fight2.h(399): warning C4715: 'fight2': 모든 제어 경로에서 값을 반환하지는 않습니다.
   100_coin_hero.vcxproj -> C:\Users\pos15\source\repos\100_coin_hero\Debug\100_coin_hero.exe

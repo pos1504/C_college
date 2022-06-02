@@ -142,8 +142,11 @@ int fight2(int *monster_number, struct monstercount a)
 
 
             scanf("%d", &mch);
-       
-
+            
+            if (mch > *monster_number) {
+                printf("올바른 숫자를 입력하세요\n");
+                goto back;
+            }
             if (buffer_m[mch - 1][0] <= 0)
             {
 
