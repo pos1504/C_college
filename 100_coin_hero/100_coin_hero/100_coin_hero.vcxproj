@@ -142,13 +142,18 @@
     <ClCompile Include="main.c" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Bossmonster.h" />
     <ClInclude Include="choose_status.h" />
     <ClInclude Include="fight.h" />
+    <ClInclude Include="fight2.h" />
     <ClInclude Include="gotoxy.h" />
+    <ClInclude Include="monster_list.h" />
     <ClInclude Include="monster_status.h" />
+    <ClInclude Include="name.h" />
     <ClInclude Include="printmap.h" />
     <ClInclude Include="print_status.h" />
     <ClInclude Include="RandomMonster.h" />
+    <ClInclude Include="RandomMonster2.h" />
     <ClInclude Include="ranking.h" />
     <ClInclude Include="store.h" />
   </ItemGroup>
@@ -157,6 +162,8 @@
     <Text Include="monster1_status.txt" />
     <Text Include="monster2_status.txt" />
     <Text Include="monster3_status.txt" />
+    <Text Include="monster_list.txt" />
+    <Text Include="name.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

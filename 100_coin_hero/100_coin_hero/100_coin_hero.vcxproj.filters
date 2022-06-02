@@ -47,6 +47,21 @@
     <ClInclude Include="ranking.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
+    <ClInclude Include="monster_list.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="name.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="fight2.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="RandomMonster2.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Bossmonster.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Text Include="monster1_status.txt">
@@ -59,6 +74,12 @@
       <Filter>소스 파일</Filter>
     </Text>
     <Text Include="hero_status.txt">
+      <Filter>소스 파일</Filter>
+    </Text>
+    <Text Include="monster_list.txt">
+      <Filter>소스 파일</Filter>
+    </Text>
+    <Text Include="name.txt">
       <Filter>소스 파일</Filter>
     </Text>
   </ItemGroup>

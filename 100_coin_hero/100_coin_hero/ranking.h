@@ -7,35 +7,39 @@
 #define StatusSize 10
 #define MAX 5
 
-// 100ê³¨ë“œë¥¼ ëª¨ìœ¼ê¸°ê¹Œì§€ stageì˜ ìˆ˜ê°€ ì ì„ìˆ˜ë¡ ìˆœìœ„ê°€ ë†’ìŒ
+// 100°ñµå¸¦ ¸ğÀ¸±â±îÁö stageÀÇ ¼ö°¡ ÀûÀ»¼ö·Ï ¼øÀ§°¡ ³ôÀ½
 
 int ranking(void) 
 {	
 	system("cls");
-	char name[10];
-	int stagenum[20];
+	char name[20] = { 0, };
+	int stagenum;
 
-	FILE* stream;
-	stream = fopen("name.txt", "r");
-	printf("player ì´ë¦„: %s\n", name);
+	FILE* fp;
+	fp = fopen("name.txt", "r");
 	
+	fgets(name, sizeof(name), fp);
+	printf("player ÀÌ¸§: %s\n", name);
+
+	fclose(fp);
 
 	int buffer[StatusSize] = { 0 };
-	FILE* fp = fopen("hero_status.txt", "r");
-	buffer[9] = stagenum;
-	printf("stage ìˆ˜: %d\n", stagenum);
-	
+	FILE* f = fopen("hero_status.txt", "r");
+	fscanf(f, "%d",buffer[9]);
+	stagenum = buffer[9];
+	printf("stage ¼ö: %d\n", stagenum);
+	fclose(f);
 	
 	int i; int j; int rank[MAX];
 
 	for (i = 0; i < MAX; i++)
 	{
-		printf("player ì •ë³´\n");
-		printf("->player ì´ë¦„: %s\n", name); 
-		printf("->stage ìˆ˜: %d\n", stagenum);  
+		printf("player Á¤º¸\n");
+		printf("->player ÀÌ¸§: %s\n", name); 
+		printf("->stage ¼ö: %d\n", stagenum);  
 	}
 	
-	for (i = 0; i < MAX; i++)
+	/*for (i = 0; i < MAX; i++)
 	{
 		for (j = 0; j < MAX; j++)
 		{
@@ -46,12 +50,12 @@ int ranking(void)
 		}
 	}
 
-	printf("%4s| %4s| %8s| \n","ìˆœìœ„" "player ì´ë¦„", "stage ìˆ˜");
+	//printf("%4s| %4s| %8s| \n","¼øÀ§" "player ÀÌ¸§", "stage ¼ö");
 	for (i = 0; i < MAX; i++)
 	{
 		printf("%4d| %8s| %4d|\n",
 			rank, name, stagenum);
 	}
-	fclose(stream);
-	fclose(fp);
+	*/
+	
 }

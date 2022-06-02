@@ -1,3 +1,4 @@
+#pragma once
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
@@ -5,6 +6,8 @@
 #define StatusSize 10
 
 void print_status();
+
+
 void RandomMonster(int *monster_number,int *mon1,int *mon2,int *mon3)
 {
     print_status();

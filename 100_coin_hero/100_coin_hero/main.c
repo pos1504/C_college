@@ -1,4 +1,6 @@
-﻿#include<stdio.h>
+﻿
+
+#include<stdio.h>
 #include<stdlib.h>
 #include<time.h>
 #include<Windows.h>
@@ -7,8 +9,11 @@
 #include"print_status.h"
 #include"monster_status.h"
 #include"RandomMonster.h"
+#include"RandomMonster2.h"
+#include"Bossmonster.h"
 #include"gotoxy.h"
 #include"fight.h"
+#include"fight2.h"
 #include"store.h"
 #include"monster_list.h"
 #include"ranking.h"
@@ -24,6 +29,8 @@ struct map
 	int size;
 
 }map1[5];
+
+
 
 void createmap() {
 
@@ -243,7 +250,7 @@ void printmap() {
 void startscreen() {
 
 	int n;
-	printf("1. 처음 시작 \n2. 이어 하기\n3. 플레이어 순위\n4. 몬스터 도감\n"); 
+	printf("1. 처음 시작 \n2. 이어 하기\n3. 몬스터 도감\n"); 
 	scanf("%d",&n );
 
 	if (n == 1) {
@@ -257,12 +264,9 @@ void startscreen() {
 	}
 	if (n == 3)
 	{
-		ranking();
-	}
-	if(n==4)
-	{
 		monster_list();
 	}
+
 	else 
 	{
 		return 0;
@@ -383,8 +387,8 @@ void roop() {
 		}
 		if (map1[stagenum].stagetype[(num-1)] == 1)
 		{
-			RandomMonster(&monster_number, &mon1, &mon2, &mon3);
-			fight(&monster_number, &mon1, &mon2, &mon3);
+			RandomMonster2(&monster_number, mon[10]);
+			fight2(&monster_number, mon[10]);
 			
 			stagenum++;
 			temp = num;
@@ -402,8 +406,8 @@ void roop() {
 		}
 		else if (map1[stagenum].stagetype[(num - 1)] == 3)
 		{
-			RandomMonster(&monster_number, &mon1, &mon2, &mon3);
-			fight(&monster_number, &mon1, &mon2, &mon3); // 보스로 변경 시키기
+			BossMonster(&monster_number, mon[10]);
+			fight2(&monster_number, mon[10]); //보스로 변경
 
 			stagenum++;
 			temp = num;
@@ -440,6 +444,7 @@ void roop() {
 int main() 
 {	
 	int monster_number=0   , mon1=0 , mon2=0 , mon3=0 ;
+	
 	//createmap();
 	//printmap();
 	//printmap();
@@ -451,9 +456,13 @@ int main()
 		}
 	}
 	
-		*/	
+		*/
+
+	//fight2();
 	startscreen();
 
+	//RandomMonster2(&monster_number,mon[10]);
+	//fight2(&monster_number, mon[10]);
 	//choose_status();
 	//store();
 	

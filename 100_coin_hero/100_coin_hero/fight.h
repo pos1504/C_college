@@ -1,4 +1,4 @@
-
+#pragma once
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
@@ -212,8 +212,10 @@ void fight(int *monster_number, int* mon1, int* mon2, int* mon3)  // fight함수를
 
             if(buffer_h[2] < 0 )
             {
+                printf("마나가 없습니다 다시선택해주세요.\n");
                 buffer_h[2] += 4;
                 ch = 0;
+                Sleep(1000);
             }
             else 
             {

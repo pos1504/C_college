@@ -1,16 +1,32 @@
-﻿
+﻿#pragma once
 #include<stdio.h>
 #include<stdlib.h>
 #define _CRT_SECURE_NO_WARNINGS
 #define StatusSize 10
+#include"monster_list.h"
 void choose_status()
 {
 	system("cls");//화면지우기
-	
-	char name[10]; //이름 입력
-	printf("이름 입력: ");
-	scanf("%s", &name);
-	printf("player 이름: %s\n", name);
+	FILE* fp;
+
+	fopen_s(&fp, "monster_list.txt", "r");  //
+
+	for (int i = 0; i < StatusSize; i++)
+	{
+		fscanf(fp, "%s %d %d %d %d", &m[i].name, &m[i].hp, &m[i].atk, &m[i].gold, &m[i].lock);
+
+	}
+	fclose(fp);
+
+	fopen_s(&fp, "monster_list.txt", "w");
+
+	for (int i = 0; i < StatusSize; i++) {
+		int lockoff = 0;
+		 fprintf(fp, "%s %d %d %d %d \n", m[i].name, m[i].hp, m[i].atk, m[i].gold,lockoff); //도감 초기화
+
+
+	}
+	fclose(fp);
 
 	int num;
 	printf("캐릭터를 선택하세요.\n");
@@ -28,6 +44,7 @@ void choose_status()
 
 		fclose(fp);
 	}
+
 
 	if (num == 2)
 	{

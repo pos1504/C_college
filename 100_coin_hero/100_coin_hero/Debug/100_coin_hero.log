@@ -1,23 +1,27 @@
 ﻿  main.c
-C:\Users\pos15\source\repos\100_coin_hero\100_coin_hero\choose_status.h(4,1): warning C4005: '_CRT_SECURE_NO_WARNINGS': 매크로 재정의
+C:\Users\pos15\source\repos\100_coin_hero\100_coin_hero\name.h(5,1): warning C4005: '_CRT_SECURE_NO_WARNINGS': 매크로 재정의
 C:\Users\pos15\source\repos\100_coin_hero\100_coin_hero\main.c : message : '_CRT_SECURE_NO_WARNINGS'의 이전 정의를 참조하십시오.
-C:\Users\pos15\source\repos\100_coin_hero\100_coin_hero\print_status.h(19,11): warning C4098: 'print_status': 'void' 함수에서 값을 반환하고 있습니다.
+C:\Users\pos15\source\repos\100_coin_hero\100_coin_hero\print_status.h(20,11): warning C4098: 'print_status': 'void' 함수에서 값을 반환하고 있습니다.
 C:\Users\pos15\source\repos\100_coin_hero\100_coin_hero\monster_status.h(17,17): warning C4098: 'monster_status': 'void' 함수에서 값을 반환하고 있습니다.
 C:\Users\pos15\source\repos\100_coin_hero\100_coin_hero\monster_status.h(34,17): warning C4098: 'monster_status': 'void' 함수에서 값을 반환하고 있습니다.
 C:\Users\pos15\source\repos\100_coin_hero\100_coin_hero\monster_status.h(51,17): warning C4098: 'monster_status': 'void' 함수에서 값을 반환하고 있습니다.
 C:\Users\pos15\source\repos\100_coin_hero\100_coin_hero\monster_status.h(7,9): warning C4101: 'num' :참조되지 않은 지역 변수입니다.
-C:\Users\pos15\source\repos\100_coin_hero\100_coin_hero\RandomMonster.h(13,21): warning C4244: '함수': 'time_t'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\pos15\source\repos\100_coin_hero\100_coin_hero\RandomMonster.h(16,21): warning C4244: '함수': 'time_t'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\pos15\source\repos\100_coin_hero\100_coin_hero\RandomMonster2.h(24,21): warning C4244: '함수': 'time_t'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\pos15\source\repos\100_coin_hero\100_coin_hero\Bossmonster.h(17,21): warning C4244: '함수': 'time_t'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
 C:\Users\pos15\source\repos\100_coin_hero\100_coin_hero\fight.h(43,25): warning C4098: 'fight': 'void' 함수에서 값을 반환하고 있습니다.
 C:\Users\pos15\source\repos\100_coin_hero\100_coin_hero\fight.h(63,25): warning C4098: 'fight': 'void' 함수에서 값을 반환하고 있습니다.
 C:\Users\pos15\source\repos\100_coin_hero\100_coin_hero\fight.h(84,25): warning C4098: 'fight': 'void' 함수에서 값을 반환하고 있습니다.
-C:\Users\pos15\source\repos\100_coin_hero\100_coin_hero\fight.h(368,22): warning C4098: 'fight': 'void' 함수에서 값을 반환하고 있습니다.
-C:\Users\pos15\source\repos\100_coin_hero\100_coin_hero\store.h(19,11): warning C4098: 'store': 'void' 함수에서 값을 반환하고 있습니다.
-C:\Users\pos15\source\repos\100_coin_hero\100_coin_hero\ranking.h(50,9): warning C4473: 'printf': 서식 문자열에 대한 인수가 충분하게 전달되지 않았습니다.
-C:\Users\pos15\source\repos\100_coin_hero\100_coin_hero\ranking.h(50,9): message : 자리 표시자 및 해당 매개 변수에는 variadic 인수가 3개 필요하지만 2개가 제공되었습니다.
-C:\Users\pos15\source\repos\100_coin_hero\100_coin_hero\ranking.h(50,9): message : 누락된 variadic 인수 3이(가) 서식 문자열 '%8s'에 필요합니다.
-C:\Users\pos15\source\repos\100_coin_hero\100_coin_hero\main.c(29,18): warning C4244: '함수': 'time_t'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\pos15\source\repos\100_coin_hero\100_coin_hero\main.c(262,11): warning C4098: 'startscreen': 'void' 함수에서 값을 반환하고 있습니다.
-C:\Users\pos15\source\repos\100_coin_hero\100_coin_hero\main.c(275,18): warning C4244: '함수': 'time_t'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\pos15\source\repos\100_coin_hero\100_coin_hero\fight.h(370,22): warning C4098: 'fight': 'void' 함수에서 값을 반환하고 있습니다.
+C:\Users\pos15\source\repos\100_coin_hero\100_coin_hero\store.h(20,11): warning C4098: 'store': 'void' 함수에서 값을 반환하고 있습니다.
+C:\Users\pos15\source\repos\100_coin_hero\100_coin_hero\ranking.h(28,12): warning C4477: 'fscanf' : 서식 문자열 '%d'에 'int *' 형식의 인수가 필요하지만 variadic 인수 1의 형식이 'int'입니다.
+C:\Users\pos15\source\repos\100_coin_hero\100_coin_hero\ranking.h(33,13): warning C4101: 'j' :참조되지 않은 지역 변수입니다.
+C:\Users\pos15\source\repos\100_coin_hero\100_coin_hero\ranking.h(33,20): warning C4101: 'rank' :참조되지 않은 지역 변수입니다.
+C:\Users\pos15\source\repos\100_coin_hero\100_coin_hero\main.c(37,18): warning C4244: '함수': 'time_t'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\pos15\source\repos\100_coin_hero\100_coin_hero\main.c(272,11): warning C4098: 'startscreen': 'void' 함수에서 값을 반환하고 있습니다.
+C:\Users\pos15\source\repos\100_coin_hero\100_coin_hero\main.c(285,18): warning C4244: '함수': 'time_t'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\pos15\source\repos\100_coin_hero\100_coin_hero\monster_list.h(64): warning C4716: 'monster_list': 값을 반환해야 합니다.
 C:\Users\pos15\source\repos\100_coin_hero\100_coin_hero\gotoxy.h(18): warning C4716: 'gotoxy': 값을 반환해야 합니다.
-C:\Users\pos15\source\repos\100_coin_hero\100_coin_hero\ranking.h(55): warning C4716: 'ranking': 값을 반환해야 합니다.
+C:\Users\pos15\source\repos\100_coin_hero\100_coin_hero\ranking.h(61): warning C4716: 'ranking': 값을 반환해야 합니다.
+C:\Users\pos15\source\repos\100_coin_hero\100_coin_hero\fight2.h(394): warning C4715: 'fight2': 모든 제어 경로에서 값을 반환하지는 않습니다.
   100_coin_hero.vcxproj -> C:\Users\pos15\source\repos\100_coin_hero\Debug\100_coin_hero.exe
