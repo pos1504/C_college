@@ -1,3 +1,4 @@
+#pragma once
 #include<stdio.h>
 #include<stdlib.h>
 #include<time.h>
@@ -5,57 +6,62 @@
 #include<string.h>
 #define _CRT_SECURE_NO_WARNINGS
 #define StatusSize 10
-#define MAX 5
 
-// 100°ñµå¸¦ ¸ğÀ¸±â±îÁö stageÀÇ ¼ö°¡ ÀûÀ»¼ö·Ï ¼øÀ§°¡ ³ôÀ½
+// 100ê³¨ë“œë¥¼ ëª¨ìœ¼ê¸°ê¹Œì§€ stageì˜ ìˆ˜ê°€ ì ì„ìˆ˜ë¡ ìˆœìœ„ê°€ ë†’ìŒ
 
-int ranking(void) 
-{	
-	system("cls");
-	char name[20] = { 0, };
+
+
+void startscreen();
+
+struct Rank
+{
+	char name[10];
 	int stagenum;
+	int rank;
+}r[5];
 
-	FILE* fp;
-	fp = fopen("name.txt", "r");
+int ranking(void)
+{
+	system("cls");
+
+	int i; int j;
+	int num = 0;
 	
-	fgets(name, sizeof(name), fp);
-	printf("player ÀÌ¸§: %s\n", name);
-
+	FILE* fp;
+	fopen_s(&fp, "name.txt", "r");
+	
+	for (int i = 0; i < StatusSize; i++)
+	{
+		fscanf(fp, "%s", &r[i].name);
+	}
 	fclose(fp);
 
 	int buffer[StatusSize] = { 0 };
 	FILE* f = fopen("hero_status.txt", "r");
-	fscanf(f, "%d",buffer[9]);
-	stagenum = buffer[9];
-	printf("stage ¼ö: %d\n", stagenum);
+	fscanf(f, "%d", buffer[9]);
+	r[i].stagenum = buffer[9];
 	fclose(f);
-	
-	int i; int j; int rank[MAX];
 
-	for (i = 0; i < MAX; i++)
+	printf("ìˆœìœ„ | í”Œë ˆì´ì–´ ì´ë¦„ | ìŠ¤í…Œì´ì§€ ìˆ˜ |\n");
+
+	for (i = 0; i < 10; i++)
 	{
-		printf("player Á¤º¸\n");
-		printf("->player ÀÌ¸§: %s\n", name); 
-		printf("->stage ¼ö: %d\n", stagenum);  
-	}
-	
-	/*for (i = 0; i < MAX; i++)
-	{
-		for (j = 0; j < MAX; j++)
-		{
-			if (stagenum[i] > stagenum[j])
-			{
-				rank[i] += 1;
-			}
+		r[i].rank = 0;
+		for(j=0; j<10; j++)
+		{ 
+			if (r[i].stagenum > r[j].stagenum )
+		    {
+				r[i].rank++;
+		    }
 		}
+		printf("%4d| %8d| %16d|\n", r[i].rank, r[i].name, r[i].stagenum);
 	}
 
-	//printf("%4s| %4s| %8s| \n","¼øÀ§" "player ÀÌ¸§", "stage ¼ö");
-	for (i = 0; i < MAX; i++)
-	{
-		printf("%4d| %8s| %4d|\n",
-			rank, name, stagenum);
+	printf("1.ë©”ì¸í™”ë©´ìœ¼ë¡œ ëŒì•„ê°€ê¸°\n");
+	scanf("%d", &num);
+	if (num == 1) {
+		system("cls");
+		startscreen();
+
 	}
-	*/
-	
 }
