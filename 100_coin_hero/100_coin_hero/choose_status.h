@@ -7,7 +7,8 @@
 void choose_status()
 {
 	system("cls");//화면지우기
-	FILE* fp;
+	
+	/*FILE* fp;
 
 	fopen_s(&fp, "monster_list.txt", "r");  //
 
@@ -27,7 +28,7 @@ void choose_status()
 
 	}
 	fclose(fp);
-
+	*/
 	int num;
 	printf("캐릭터를 선택하세요.\n");
 	printf("1. 검사   2.법사   3.도적 \n");

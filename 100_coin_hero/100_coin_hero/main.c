@@ -296,10 +296,11 @@ void roop() {
 	createmap();
 
 
-	while (buffer_h[3] < 100)// 골드량이 100크면 종료
+	while (buffer_h[3] < 100 )// 골드량이 100크면 종료
 	{
 		int stagenum = buffer_h[9] % 5;
 		
+
 		
 		
 		if (stagenum > 4)
@@ -421,7 +422,10 @@ void roop() {
 		}
 		fclose(fp);
 
-
+		if (buffer_h[0] <= 0) {
+			printf("게임종료!\n");
+			return 0;
+		}
 		
 
 		
@@ -430,6 +434,7 @@ void roop() {
 	}
 
 	printf("게임종료!\n");
+	return 0;
 
 
 }

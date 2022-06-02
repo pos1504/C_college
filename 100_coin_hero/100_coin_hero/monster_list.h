@@ -54,12 +54,36 @@ int monster_list(void)
 		}
 	}
 
-	printf("1.메인화면으로 돌아가기\n");
+	printf("1.메인화면으로 돌아가기 2. 도감 초기화\n");
 	scanf("%d", &num);
 	if (num == 1) {
 		system("cls");
 		startscreen();
 		
+	}
+	else {
+
+		fopen_s(&fp, "monster_list.txt", "r");  //
+
+		for (int i = 0; i < StatusSize; i++)
+		{
+			fscanf(fp, "%s %d %d %d %d", &m[i].name, &m[i].hp, &m[i].atk, &m[i].gold, &m[i].lock);
+
+		}
+		fclose(fp);
+
+		fopen_s(&fp, "monster_list.txt", "w");
+
+		for (int i = 0; i < StatusSize; i++) {
+			int lockoff = 0;
+			fprintf(fp, "%s %d %d %d %d \n", m[i].name, m[i].hp, m[i].atk, m[i].gold, lockoff); //도감 초기화
+
+
+		}
+		fclose(fp);
+
+		system("cls");
+		monster_list();
 	}
 }
 

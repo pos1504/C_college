@@ -135,12 +135,14 @@ int fight2(int *monster_number, struct monstercount a)
                     continue;
                 }
                 printf("%d.∏ÛΩ∫≈Õ ", i + 1);
+                
             }
 
-
+            
 
 
             scanf("%d", &mch);
+       
 
             if (buffer_m[mch - 1][0] <= 0)
             {
