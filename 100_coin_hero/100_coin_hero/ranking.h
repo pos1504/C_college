@@ -7,49 +7,51 @@
 #define StatusSize 10
 #define MAX 5
 
-// 100°ñµå¸¦ ¸ğÀ¸±â±îÁö stageÀÇ ¼ö°¡ ÀûÀ»¼ö·Ï ¼øÀ§°¡ ³ôÀ½
-
-struct Player
-{
-	char name[20];
-	int stagenum;
-	int rank;
-};
+// 100ê³¨ë“œë¥¼ ëª¨ìœ¼ê¸°ê¹Œì§€ stageì˜ ìˆ˜ê°€ ì ì„ìˆ˜ë¡ ìˆœìœ„ê°€ ë†’ìŒ
 
 int ranking(void) 
 {	
 	system("cls");
-	
-	int i; int j;
-	
-	struct Player player_list[MAX];
+	char name[10];
+	int stagenum[20];
 
-	for (i = 0; i < MAX; i++) {
-		player_list[i].rank = 0;
-	}
+	FILE* stream;
+	stream = fopen("name.txt", "r");
+	printf("player ì´ë¦„: %s\n", name);
+	
+
+	int buffer[StatusSize] = { 0 };
+	FILE* fp = fopen("hero_status.txt", "r");
+	buffer[9] = stagenum;
+	printf("stage ìˆ˜: %d\n", stagenum);
 	
 	
+	int i; int j; int rank[MAX];
+
 	for (i = 0; i < MAX; i++)
 	{
-		printf("player %d Á¤º¸ ÀÔ·Â \n", i + 1);
-		printf("->player ÀÌ¸§: "); scanf("%s", player_list[i].name); //ÀÌ¸§ ÀÔ·Â
-		printf("->stage ¼ö: "); scanf("%d", &player_list[i].stagenum); //stage ¼ö ÀÔ·Â
+		printf("player ì •ë³´\n");
+		printf("->player ì´ë¦„: %s\n", name); 
+		printf("->stage ìˆ˜: %d\n", stagenum);  
 	}
 	
 	for (i = 0; i < MAX; i++)
 	{
 		for (j = 0; j < MAX; j++)
 		{
-			if (player_list[i].stagenum > player_list[j].stagenum) 
+			if (stagenum[i] > stagenum[j])
 			{
-				player_list[i].rank=player_list[i].rank+1;
+				rank[i] += 1;
 			}
 		}
 	}
 
-	printf("%4s| %4s| %8s| \n","¼øÀ§" "player ÀÌ¸§", "stage ¼ö");
+	printf("%4s| %4s| %8s| \n","ìˆœìœ„" "player ì´ë¦„", "stage ìˆ˜");
 	for (i = 0; i < MAX; i++)
 	{
-		printf("%4d| %4s| %8d|\n",player_list[i].rank, player_list[i].name, player_list[i].stagenum);
+		printf("%4d| %8s| %4d|\n",
+			rank, name, stagenum);
 	}
+	fclose(stream);
+	fclose(fp);
 }
